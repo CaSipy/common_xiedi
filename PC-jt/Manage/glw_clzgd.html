@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gl_vip.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gl_lsgd.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/fenye.css"/>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="gl_zong">
+			<div id="gl_all_header"></div>
+				
+			<div class="gl_content">
+				<div id="glc_all_left"></div>
+				<div class="glc_right">
+					<div class="gl_adss">
+						<p>您的位置：</p>
+						<ul>
+							<li>工单处理中心</li>
+							<li>></li>
+							<li>公共工单</li>
+							<li>></li>
+							<li>处理中工单列表</li>
+						</ul>
+					</div>
+					<div class="gl_table">
+						<table border="3px solid #777777" cellspacing="" cellpadding="">
+							<thead>
+								<tr>
+									<td>工单编号</td>
+									<td>创建时间</td>
+									<td>会员</td>
+									<td>留言摘要</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>李老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>
+										<a href="javascript">处理工单</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>张老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>
+										<a href="javascript">处理工单</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>陈老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>
+										<a href="javascript">处理工单</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>李老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>
+										<a href="javascript">处理工单</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tcdPageCode" style="text-align: left; margin-left: 30%; margin-top: 5% !important;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+<script type="text/javascript" src="fenye.js"></script>
+<script type="text/javascript">
+	gl();
+	var n = 9;
+	$(".tcdPageCode").createPage({
+		pageCount: n,
+		current: 1,
+		backFn: function(p) {
+			$('#ye').html(p);
+		}
+	});
+
+	$('.zhebi').height($(document).height());
+	//	弹窗
+	//取消
+	$('.gl_qx').click(function() {
+		$('.zhebi').addClass('gl_cz_active');
+	});
+	//关闭X
+	$('.gl_close').click(function() {
+		$('.zhebi').addClass('gl_cz_active');
+	});
+	//批量选择
+	$('#beZero').click(function() {
+		$('.zhebi').removeClass('gl_cz_active');
+		$('#qr_Zero').removeClass('gl_cz_active');
+		$('#pl_select').addClass('gl_cz_active');
+	});
+	$('#vip_dj').click(function() {
+		$('.zhebi').removeClass('gl_cz_active');
+		$('#pl_select').removeClass('gl_cz_active');
+		$('#qr_Zero').addClass('gl_cz_active');
+	});
+	//全选
+	$('#all_check').click(function() {
+		if($('#all_check').is(':checked')) {
+			$("input[type='checkbox']").attr("checked", "true");
+		} else {
+			$("input[type='checkbox']").removeAttr("checked");
+		}
+	});
+</script>

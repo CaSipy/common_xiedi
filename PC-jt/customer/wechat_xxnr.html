@@ -1,0 +1,776 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/chat.css" />
+		<link rel="stylesheet" href="../css/safe/css.css" />
+		<link rel="stylesheet" href="../css/safe/common.min.css" />
+		<link rel="stylesheet" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" href="../css/safe/personal_member.min.css" />
+		<link rel="stylesheet" href="../css/safe/Snaddress.min.css" />
+		<link rel="stylesheet" type="text/css" href="../font1/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../whechatfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<link rel="stylesheet" href="../css/fenye.css">
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Chase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/chat.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/IE7.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/iepng.js" type="text/javascript" charset="utf-8"></script>
+		<!--导入DWR引擎  -->
+		<script type="text/javascript" src="../../dwr/engine.js"></script>
+		<script type="text/javascript" src="../../dwr/util.js"></script>
+		<script type="text/javascript" src="../../dwr/interface/_WdBODwr_js.js"></script>
+		<style>
+			progress {
+				width: 300px;
+				border: 1px solid #ffffff;
+				background-color: #e6e6e6;
+				color: #0064B4;
+				/*IE10*/
+			}
+			
+			progress::-moz-progress-bar {
+				background: #FFFFFF;
+			}
+			
+			progress::-webkit-progress-bar {
+				background: #ccc;
+			}
+			
+			progress::-webkit-progress-value {
+				background: #FF7700;
+			}
+			
+			a {
+				color: #000000;
+			}
+			
+			.sui-table th,
+			.sui-table td {
+				padding: 16px 8px;
+				line-height: 18px;
+				text-align: center;
+				vertical-align: middle;
+				border-top: 1px solid #e6e6e6;
+			}
+			
+			.sui-nav.nav-tabs> .active> a {
+				font-weight: bold;
+				border: 1px #fff solid;
+				background-color: #fff;
+				border-bottom-color: transparent;
+				cursor: default;
+				font-weight: bold;
+				color: #F2873B;
+			}
+			
+			.sui-nav.nav-tabs> li> a {
+				color: #333333;
+				line-height: 18px;
+				-webkit-border-radius: 3px 3px 0 0;
+				-moz-border-radius: 3px 3px 0 0;
+				border-radius: 3px 3px 0 0;
+				border: 1px #fff solid;
+				border-bottom: 1px #fff solid;
+				height: 30px;
+				width: 110px;
+				text-align: center;
+				padding-top: 10px;
+				font-size: 14px;
+			}
+			
+			.sui-nav.nav-tabs {
+				border-bottom: 1px solid #CECECE;
+				padding-left: 5px;
+			}
+			
+			.sui-nav.nav-tabs> .active> a:hover {
+				font-weight: bold;
+				cursor: default;
+				font-weight: bold;
+				color: #F37B1D;
+			}
+			
+			.sui-nav.nav-tabs> li {
+				margin-bottom: -1px;
+				background-color: #fff;
+				border-bottom: 1px #ccc solid;
+			}
+			
+			.sui-nav.nav-tabs> .active {
+				border-bottom: 0;
+			}
+			
+			.sui-nav.nav-tabs> li+ li {
+				margin-left: -3px;
+			}
+			
+			.yuan {
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				background-color: #64bdc5;
+				display: block;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 30px;
+				color: #fff;
+				font-size: 18px;
+				margin-top: 50px;
+			}
+			
+			.ng-footer {
+				height: 514px;
+				margin-top: 0;
+			}
+			
+			.ng-s-footer {
+				height: 130px;
+				background: none;
+				text-align: center;
+			}
+			
+			.ng-s-footer p.ng-url-list {
+				height: 25px;
+				line-height: 25px;
+			}
+			
+			.ng-s-footer p.ng-url-list a {
+				color: #666666;
+			}
+			
+			.ng-s-footer p.ng-url-list a:hover {
+				color: #f60;
+			}
+			
+			.ng-s-footer .ng-authentication {
+				float: none;
+				margin: 0 auto;
+				height: 25px;
+				width: 990px;
+				margin-top: 5px;
+			}
+			
+			.ng-s-footer p.ng-copyright {
+				float: none;
+				width: 100%;
+			}
+			
+			.root1200 .ng-s-footer p.ng-copyright {
+				width: 100%;
+			}
+			/*聊天框样式*/
+			
+			.send {
+				display: inline-block;
+				position: relative;
+				width: auto;
+				height: auto;
+				max-width: 80%;
+				padding: 0.5em;
+				border-radius: .5em;
+				/* 圆角 */
+				font-size: .6em;
+				overflow: hidden;
+				margin-top: 6px;
+			}
+			
+			.my {
+				background: #9FE756;
+				margin-bottom: 20px;
+			}
+			
+			.other {
+				background: #9A9A9A;
+				color: white;
+				margin-bottom: 20px;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.active {
+				border-bottom: 1px solid white !important;
+			}
+			
+			#form ul,
+			#allform ul {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+			
+			.chat {
+				width: 100%;
+				text-align: left;
+				clear: both;
+				display: table;
+				min-height: 32px;
+			}
+			
+			.chat-imgl {
+				width: 40px;
+				height: 40px;
+				float: left;
+				margin-right: 10px
+			}
+			
+			.chat-imgr {
+				width: 40px;
+				height: 40px;
+				float: right;
+				margin-left: 10px
+			}
+		</style>
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="ms-center" class="personal-member">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15" style="border: 0px;">
+						<h3 style="background-color:#fff ;padding: 15px;width: 980px; height: auto !important;">
+	                        <strong style="font-size: 16px;color: #333333;font-weight: bold;">我的消息</strong>
+						</h3>
+						<div id="mes_dh" class="mes_dh">
+							<ul>
+								<li data-base='chechatcontent'>
+									<span>消息内容</span>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<!-- 聊天界面 -->
+							<div class="ct_content">
+								<div class="chatBox">
+									<div class="chatLeft" style="width: 100% !important;">
+										<div class="chat01">
+											<div class="chat01_title">
+												<ul class="talkTo" id="chat_lx">
+													<li>
+														<a href="javascript:;">联系客服</a>
+													</li>
+												</ul>
+												<a class="close_btn" href="javascript:;"></a>
+											</div>
+											<div class="chat01_content" id="showcontent">
+												
+												<div style="width:100%;clear:both;display:table;min-height:32px">
+													<img src="../img/touxiang.png" class="chat-imgl">
+													<div class="send other fl">
+														<img src="../img/2.jpg" alt="" style="max-width: 100px;" />
+													</div>
+													<div style="clear:both"></div>
+
+												</div>
+												<div style="width:100%;clear:both;display:table;min-height:32px">
+													<img src="../img/touxiang.png" class="chat-imgl">
+													<div class="send other fl">
+														<img src="../img/2.jpg" alt="" style="max-width: 100px;" />
+													</div>
+													<div style="clear:both"></div>
+
+												</div>
+
+												<!--<div class="message_box mes1">-->
+												<!--</div>-->
+												<!--<div class="message_box mes2">-->
+												<!--</div>-->
+												<!--<div class="message_box mes3" style="display: block;">-->
+												<!--</div>-->
+												<!--<div class="message_box mes4">-->
+												<!--</div>-->
+												<!--<div class="message_box mes5">-->
+												<!--</div>-->
+												<!--<div class="message_box mes6">-->
+												<!--</div>-->
+												<!--<div class="message_box mes7">-->
+												<!--</div>-->
+												<!--<div class="message_box mes8">-->
+												<!--</div>-->
+												<!--<div class="message_box mes9">-->
+												<!--</div>-->
+												<!--<div class="message_box mes10">-->
+												<!--</div>-->
+											</div>
+											<div id="chat_0" style="width:100%;height:10px"></div>
+										</div>
+										
+										<div class="chat02">
+											<div class="chat02_title">
+												<a class="chat02_title_btn ctb01" href="javascript:;"></a>
+												<a class="chat02_title_btn ctb02" href="javascript:;" title="发送图片">
+													<input type="file" style="opacity:0;width:28px" id="photoupload" onchange="update()">
+												</a>
+												<a class="chat02_title_btn ctb03" href="javascript:;" title="发送连接">
+													<input type="file" style="opacity:0;cursor:pointer;width:28px;" id="urlupload">
+												</a>
+												<!--   <label class="chat02_title_t">
+                            <a href="chat.htm" target="_blank">�����¼</a></label> -->
+												<div class="wl_faces_box">
+													<div class="wl_faces_content">
+														<div class="title">
+															<ul>
+																<li class="title_name">表情包</li>
+																<li class="wl_faces_close"><span>&nbsp;</span></li>
+															</ul>
+														</div>
+														<div class="wl_faces_main">
+															<ul>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_01.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_02.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_03.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_04.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_05.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_06.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_07.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_08.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_09.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_10.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_11.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_12.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_13.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_14.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_15.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_16.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_17.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_18.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_19.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_20.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_21.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_22.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_23.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_24.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_25.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_26.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_27.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_28.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_29.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_30.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_31.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_32.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_33.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_34.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_35.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_36.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_37.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_38.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_39.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_40.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_41.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_42.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_43.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_44.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_45.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_46.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_47.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_48.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_49.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_50.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_51.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_52.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_53.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_54.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_55.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_56.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_57.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_58.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_59.gif" /></a>
+																</li>
+																<li>
+																	<a href="javascript:;">
+																		<img src="../img/face/emo_60.gif" /></a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="wlf_icon">
+													</div>
+												</div>
+											</div>
+											<div class="chat02_content" style="width: 100% !important;">
+												<textarea id="textarea" style="width: 100% !important;">></textarea>
+											</div>
+											<div class="chat02_bar">
+												<ul>
+
+													<li style="right: 5px; top: 5px;">
+														<a id="send" href="javascript:;">
+															<img src="../img/send_btn.jpg"></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div style="clear: both;">
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+		<script type="text/javascript" src="../js/safe/ms_common.min.js"></script>
+		<!--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>-->
+		<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+		<script type="text/javascript" src="fenye.js"></script>
+
+		<script>
+			var uid = "111";
+			var q_id ="122";
+			//-----------------------------
+			$(function() {
+			/* 	var url=window.location.href;
+				String.prototype.getQuery = function(name){
+				var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+				var r=this.substr(this.indexOf("?")+1).match(reg);
+				if(r!=null)return unescape(r[2]); return null;
+				}; 
+				uid=url.getQuery("u_id");
+				q_id=url.getQuery("q_id");
+				 */
+			 //--------------------------
+				com();
+				Load();
+				
+			});
+			
+			var n = 9;
+			$(".tcdPageCode").createPage({
+				pageCount: n,
+				current: 1,
+				backFn: function(p) {
+					$('#ye').html(p);
+				}
+			});
+			//发文字
+			$('#send').click(function() {
+				var content = $('#textarea').val();
+				if(content == '' || content == null) {
+					alert('请输入发送内容！');
+				} else {
+					
+					_WdBODwr_js.doSendInfo(q_id, uid, content, function(data) {
+						
+						if(data){
+							var str='<div class="chat"><img src="../img/touxiang.png" class="chat-imgr"><div class="send my fr">' +content + '</div><div style="clear:both"></div></div>';
+							$('#showcontent').append(str);
+							$('#textarea').val('');
+							window.location = "#chat_0"; 
+						} else {
+							alert('发送失败，请重新发送');
+						}
+
+					});
+
+				}
+
+			});
+			//-------------------------------------
+			//发送图片
+			function update(){
+			    var file = dwr.util.getValue("photoupload");
+			    /*//查看上一次的上传     是否是必要？
+			     if($("#photo").val()!=null&&$("#photo").val()!=""){
+			     _UserBO_js.deletePhoto(photo, function(data){});
+			     }*/
+			    //alert(file.value);//不同浏览器在此处得到的值,不一定相同....IE9得到的是含全路径的文件名, firefox12得到的是文件名
+			    _WdBODwr_js.doSendImg(file, file.value,uid,q_id,function(data) {
+			       		 if(data){
+							var str='<div style="width:100%;clear:both;display:table;min-height:32px">'
+									+'  <img src="../img/touxiang.png" class="chat-imgr">'
+									+'	<div class="send my fr">'
+									+'	<img src="/youdi_pc'+data+'" alt="" style="max-width: 100px;" />'
+									+'	</div>'
+									+'	<div style="clear:both"></div>'
+									+'	</div>';
+							$('#showcontent').append(str);
+							$('#textarea').val('');
+							window.location = "#chat_0"; 
+						} else {
+							alert('发送失败，请重新发送');
+						}
+			
+			    });
+			}
+		//	------------------------------------
+			var page = 1;
+			
+			//查询语句
+			function Load(){
+				_WdBODwr_js.listDetail(q_id,page, function(data) {
+					var str = "";
+					for(var i = 0; i < data.length; i++) {
+						if(data[i].file_type == '文本') {
+							if(data[i].f_id != uid) {
+								str = '<div class="chat"><img src="../img/touxiang.png" class="chat-imgl"><div class="send other">' + data[i].content + '</div></div>';
+							} else {
+								str = '<div class="chat"><img src="../img/touxiang.png" class="chat-imgr"><div class="send my fr">' + data[i].content + '</div><div style="clear:both"></div></div>';
+							}
+							if(str != '' || str != null) {
+								$('#showcontent').prepend(str);
+							}
+						}
+						
+						 else if(data[i].file_type=='图片'){
+						 	
+							if(data[i].f_id!=uid) {
+								str = '<div class="chat"><img src="../img/touxiang.png" class="chat-imgl"><div class="send other"><img src="/youdi_pc' + data[i].file_id  + '" alt="" style="max-width: 100px;" /></div></div>';
+							} else {
+								str = '<div class="chat"><img src="../img/touxiang.png" class="chat-imgr"><div class="send my fr"><img src="/youdi_pc' + data[i].file_id + '" alt="" style="max-width: 100px;" /></div></div>';
+							} 
+							if(str != '' || str != null) {
+								$('#showcontent').prepend(str);
+							}
+						}
+					}
+					/* $('#showcontent').append(str); */
+					
+				});
+			}
+			
+			//刷新页面
+			function refresh() {
+				_WdBODwr_js.getInfo(q_id, function(data) {
+					var str = "";
+					for(var i = 0; i < data.length; i++) {
+						if(data[i].file_type == '文本') {
+							if(data[i].f_id == uid) {
+								str += '<div class="chat"><img src="../img/1.jpg" class="chat-imgl"><div class="send my">' + data[i].content + '</div></div>';
+							} else {
+								str += '<div class="chat"><img src="../img/1.jpg" class="chat-imgr"><div class="send other fr">' + data[i].content + '</div><div style="clear:both"></div></div>';
+							}
+						}
+						/* else if(data[i].file_type=='图片'){
+							if(data[i].f_id==uid) {
+								str += '<div class="chat"><img src="img/1.jpg" class="chat-img"><div class="send my">' + data.id1 + '</div></div>';
+							} else {
+								str += '<div class="chat"><img src="img/1.jpg" class="chat-imgr"><div class="send other fr">' + data.id2 + '</div><div style="clear:both"></div></div>';
+							}
+						} */
+
+					}
+					if(str != '' || str != null) {
+						$('#showcontent').prepend(str);
+					}
+				});
+			}
+
+			$('#mes_dh').children('ul').children('li').click(function() {
+
+				$(this).removeClass('mes_active ').siblings().addClass('mes_active ');
+				var base = $(this).data('base');
+
+				$('#' + base).removeClass('hide').siblings().addClass('hide ');
+
+			});
+		</script>
+	</body>
+
+</html>
+<style>
+
+</style>

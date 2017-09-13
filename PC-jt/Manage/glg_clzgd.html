@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gl_vip.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gl_lsgd.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/fenye.css"/>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--导入DWR引擎  -->
+		<script type="text/javascript" src="../../dwr/engine.js"></script>
+		<script type="text/javascript" src="../../dwr/util.js"></script>
+		<script type="text/javascript" src="../../dwr/interface/_CustomerBODwr_js.js"></script>		
+	</head>
+
+	<body>
+		<div class="gl_zong">
+			<div id="gl_all_header"></div>
+				
+			<div class="gl_content">
+				<div id="glc_all_left"></div>
+				<div class="glc_right">
+					<div class="gl_adss">
+						<p>您的位置：</p>
+						<ul>
+							<li>工单处理中心</li>
+							<li>></li>
+							<li>公共工单</li>
+							<li>></li>
+							<li>处理中工单列表</li>
+						</ul>
+					</div>
+					<div class="gl_table">
+						<table border="3px solid #777777" cellspacing="" cellpadding="">
+							<thead>
+								<tr>
+									<td>工单编号</td>
+									<td>创建时间</td>
+									<td>会员</td>
+									<td>留言摘要</td>
+									<td>指派营业员</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody id='gl_tbody'>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>李老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>客服a</td>
+									<td>
+										<a href="javascript">查看处理进度</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>张老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>客服b</td>
+									<td>
+										<a href="javascript">查看处理进度</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>陈老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>客服c</td>
+									<td>
+										<a href="javascript">查看处理进度</a>
+									</td>
+								</tr>
+								<tr>
+									<td>00001</td>
+									<td>2016-09-05</td>
+									<td>李老板</td>
+									<td class="size_astrict">帮我看看有无这个款？</td>
+									<td>客服a</td>
+									<td>
+										<a href="javascript">查看处理进度</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tcdPageCode" style="text-align: left; margin-left: 30%; margin-top: 5% !important;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+<script type="text/javascript" src="fenye.js"></script>
+<script type="text/javascript">
+	gl();
+	var n = 9;
+	$(".tcdPageCode").createPage({
+		pageCount: n,
+		current: 1,
+		backFn: function(p) {
+			$('#ye').html(p);
+		}
+	});
+	_CustomerBODwr_js.listDealingOrder(function(data){
+		var str='';
+		console.log(data);
+		for(var i=0;i<data.length;i++){
+			str='<tr>'
+				+'	<td>'+data[i].o_id+'</td>'
+				+'	<td>'+data[i].create_time+'</td>'
+				+'	<td>'+data[i].member+'</td>'
+				+'	<td class="size_astrict">'+data[i].intro+'</td>'
+				+'	<td>客服a（静态）</td>'
+				+'	<td>'
+				+'	<a href="javascript">查看处理进度</a>'
+				+'	</td>'
+				+'	</tr>';
+		}
+		$('#gl_tbody').html(str);
+	});
+	
+</script>

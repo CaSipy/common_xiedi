@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>会员中心</title>
+		<link rel="stylesheet" type="text/css" href="../css/gl_vip.css"/>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 引入DWR引擎 -->
+	<script type="text/javascript" src="../../dwr/engine.js"></script>
+	<script type="text/javascript" src="../../dwr/util.js"></script>
+	<script type="text/javascript" src="../../dwr/interface/_glvip_js.js"></script>
+	
+	</head>
+	<body>
+		<div class="gl_zong">
+			<div id="gl_all_header"></div>
+			<div class="gl_content">
+				<div class="glc_top">
+					<h1>会员管理</h1>
+					<div class="menber_style">
+						<span style="margin-right: 2.68%;">会员总人数：<i id="all_count"></i>人</span>
+						<span>本月新增会员总人数：<i id="add_count"></i>人</span>
+					</div>
+				</div>
+				<div class="glc_con">
+					<div class="gl_search">
+						<div class="gl_shuru">
+							<ul>
+								<li>
+									<span>会员编号</span>
+									<input type="text" name="gl_num" id="gl_num"/>
+								</li>
+								<li>
+									<span>会员用户名</span>
+									<input type="text" name="gl_uname" id="gl_uname" value="" />
+								</li>
+								<li>
+									<span>会员公司名</span>
+									<input type="text" name="gl_company" id="gl_company" value="" />
+								</li>
+							</ul>
+						</div>
+						<input type="button" name="gl_sousuo" id="gl_sousuo" value="搜索" onclick="search()" class="gl_sousuo" />
+					</div>
+				
+				<div class="gl_t">
+					<table border="1px solid black" cellspacing="" cellpadding="" id = "gl_list">
+						<thead>
+							<tr>
+								<td>选项</td>
+								<td>基本信息</td>
+								<td>会员订单</td>
+								<td>会员收藏</td>
+								<td>余额</td>
+								<td>奖金明细</td>
+								<td>提现明细</td>
+								<td>等级</td>
+								<td>积分</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="all_search">
+					<span>
+						<input type="checkbox" name="" id="all_check" value="" class="all_check" />全选
+					</span>
+					<a id="beZero" href="javascript:;" class="as_grade">批量积分清零</a>
+					<a id="vip_dj" href="javascript:;" class="as_grade">批量改会员等级</a>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+		<!--遮蔽层------------------------------------------>
+			<div class="zhebi gl_cz_active">
+				<div class="pouWin" style="height: auto; padding-bottom: 30px;">
+					<a href="javascript:;"><img class="gl_close" src="../img/guanbi.png" alt="关闭" /></a>
+					<h2>信息确认</h2>
+					<div id="qr_Zero" class="qr_Zero">
+						确认是否全部积分清零
+					</div>
+					<div class="gl_xgnr gl_cz_active" id="pl_select">
+						<p class="glx_p"><input type="radio" name="glx_p" id="number_level1" value="number_level1" class="gl_rad1" /><span>批量改为一级会员</span></p>
+						<p class="glx_p"><input type="radio" name="glx_p" id="number_level2" value="number_level2" class="" /><span>批量改为二级会员</span></p>
+						<p class="glx_p"><input type="radio" name="glx_p" id="number_level3" value="number_level3" class="" /><span>批量改为三级会员</span></p>
+						<p class="glx_p"><input type="radio" name="glx_p" id="private_level" value="private_level" class="gl_rad2" /><span>批量改为专属会员</span></p>
+						<p class="glx_p"><input type="radio" name="glx_p" id="accredit_level" value="accredit_level" class="gl_rad3" /><span>批量改为授信会员</span></p>
+					</div>
+					<p class="pouWin_p" style="margin-top:40px">
+						<input type="button" name="" id="" value="取消" class="gl_qx" />
+						<input type="button" name="" id="gl_qd" value="确定" onclick="integral_zero()" class="gl_qd" />
+						<input type="button" name="" id="gl_qd1" value="确定" class="gl_qd" />
+					</p>
+				</div>
+			</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+	gl();
+	$('.zhebi').height($(document).height());
+	$('#gl_qd1').hide();
+//	弹窗
+		//取消
+		$('.gl_qx').click(function(){
+			$('.zhebi').addClass('gl_cz_active');
+		});
+		//关闭X
+		$('.gl_close').click(function(){
+			$('.zhebi').addClass('gl_cz_active');
+		});
+		//批量选择
+		$('#beZero').click(function(){
+			$('.zhebi').removeClass('gl_cz_active');
+			$('#qr_Zero').removeClass('gl_cz_active');
+			$('#pl_select').addClass('gl_cz_active');
+			$('#gl_qd1').hide();
+			$('#gl_qd').show();
+		});
+		$('#vip_dj').click(function(){
+			$('.zhebi').removeClass('gl_cz_active');
+			$('#pl_select').removeClass('gl_cz_active');
+			$('#qr_Zero').addClass('gl_cz_active');
+			$('#gl_qd').hide();
+			$('#gl_qd1').show();
+		});
+		//全选
+		$('#all_check').click(function(){
+			if($('#all_check').is(':checked')){
+				$("input[type='checkbox']").attr("checked","true"); 
+			}
+			else{
+				$("input[type='checkbox']").removeAttr("checked"); 
+			}
+		});
+		
+		//本月新增会员人数
+		$(function(){
+			_glvip_js.getMemberAddCount(function(data){
+				$("#add_count").html(data);
+			});
+		});
+		//会员总人数
+		$(function(){
+			_glvip_js.getMemberCount(function(data){
+				$("#all_count").html(data);
+			});
+		});
+		search();
+		//搜索查询方法
+		function search(){
+			var u_id = $("#gl_num").val();
+			var u_name = $("#gl_uname").val();
+			var u_company = $("#gl_company").val();
+			_glvip_js.searchMember(u_id,u_name,u_company,function(data){
+				var str="";
+				for (var i = 0; i < data.length; i++) {
+				str+="<tr>"
+					+"<td><input type='checkbox' id="+data[i].u_id+" value="+data[i].u_id+"/></td>"
+					+"<td>"+data[i].u_name+"</td>"
+					+"<td><a href=javascript:look1('"+data[i].u_id+"')>点击查看</a></td>"
+					+"<td><a href=javascript:look2('"+data[i].u_id+"')>点击查看</a></td>"
+					+"<td>"+data[i].u_leftmoney+"</td>"
+					+"<td><a href=javascript:look3('"+data[i].u_id+"')>点击查看</a></td>"
+					+"<td><a href=javascript:look4('"+data[i].u_id+"')>点击查看</a></td>"
+					+"<td>"+data[i].u_level+"</td>"
+					+"<td>"+data[i].u_integral+"</td>"
+					+"<td><a href=javascript:edit('"+data[i].u_id+"')>修改&nbsp&nbsp</a>"
+					+"<input type='button' name='gl_xg' onclick='edit('"+data[i].u_id+"')' value='修改' class='gl_caozuo' />"
+					+"<a href=javascript:lock('"+data[i].u_id+"')>"+data[i].u_state+"</a></td>"
+					+"</tr>";	
+				}
+				$("#gl_list tbody").html(str);
+			});
+		}
+		function lock(u_id) {
+			if (confirm("确定要修改该用户状态？")) {
+			_glvip_js.lockUser(u_id,function (data){
+				if(data==true){
+					alert("修改成功!");
+					location.reload();
+				}else{
+					alert("修改失败!");
+				}
+			});	
+			}
+		}
+		//批量积分清零
+		function integral_zero(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.removeMemberIntegral(u_id,function(data){
+				location.reload();
+			});
+		}
+		//批量修改专属会员.
+		$('#private_level').click(function(){
+			$('#gl_qd1').click(function(){
+				update_level();
+			});
+		});
+		function update_level(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.updateExclusiveLevel(u_id,function(data){
+				location.reload();
+			});
+		}
+		//批量修改授信会员.
+		$('#accredit_level').click(function(){
+			$('#gl_qd1').click(function(){
+				accredit_level();
+			});
+		});
+		function accredit_level(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.updateAccreditLevel(u_id,function(data){
+				location.reload();
+			});
+		}
+		//批量修改一级会员.
+		$('#number_level1').click(function(){
+			$('#gl_qd1').click(function(){
+				number_level1();
+			});
+		});
+		function number_level1(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.updateNumberLevel1(u_id,function(data){
+				location.reload();
+			});
+		}
+		//批量修改二级会员.
+		$('#number_level2').click(function(){
+			$('#gl_qd1').click(function(){
+				number_level2();
+			});
+		});
+		function number_level2(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.updateNumberLevel2(u_id,function(data){
+				location.reload();
+			});
+		}
+		//批量修改三级会员.
+		$('#number_level3').click(function(){
+			$('#gl_qd1').click(function(){
+				number_level3();
+			});
+		});
+		function number_level3(){
+			var u_id ="";
+			$('input[type="checkbox"]').each(function(){
+				if($(this).is(':checked')){
+					u_id+=$(this).val();
+				}
+			});
+			_glvip_js.updateNumberLevel3(u_id,function(data){
+				location.reload();
+			});
+		}
+</script>

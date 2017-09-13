@@ -1,0 +1,477 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/safe/css.css" />
+		<link rel="stylesheet" href="../css/safe/common.min.css" />
+		<link rel="stylesheet" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" href="../css/safe/personal_member.min.css" />
+		<link rel="stylesheet" href="../css/safe/Snaddress.min.css" />
+		<link rel="stylesheet" type="text/css" href="../font1/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../whechatfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<link rel="stylesheet" href="../css/fenye.css">
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Chase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			progress {
+				width: 300px;
+				border: 1px solid #ffffff;
+				background-color: #e6e6e6;
+				color: #0064B4;
+				/*IE10*/
+			}
+			
+			progress::-moz-progress-bar {
+				background: #FFFFFF;
+			}
+			
+			progress::-webkit-progress-bar {
+				background: #ccc;
+			}
+			
+			progress::-webkit-progress-value {
+				background: #FF7700;
+			}
+			
+			a {
+				color: #000000;
+			}
+			
+			.sui-table th,
+			.sui-table td {
+				padding: 16px 8px;
+				line-height: 18px;
+				text-align: center;
+				vertical-align: middle;
+				border-top: 1px solid #e6e6e6;
+			}
+			
+			.sui-nav.nav-tabs> .active> a {
+				font-weight: bold;
+				border: 1px #fff solid;
+				background-color: #fff;
+				border-bottom-color: transparent;
+				cursor: default;
+				font-weight: bold;
+				color: #F2873B;
+			}
+			
+			.sui-nav.nav-tabs> li> a {
+				color: #333333;
+				line-height: 18px;
+				-webkit-border-radius: 3px 3px 0 0;
+				-moz-border-radius: 3px 3px 0 0;
+				border-radius: 3px 3px 0 0;
+				border: 1px #fff solid;
+				border-bottom: 1px #fff solid;
+				height: 30px;
+				width: 110px;
+				text-align: center;
+				padding-top: 10px;
+				font-size: 14px;
+			}
+			
+			.sui-nav.nav-tabs {
+				border-bottom: 1px solid #CECECE;
+				padding-left: 5px;
+			}
+			
+			.sui-nav.nav-tabs> .active> a:hover {
+				font-weight: bold;
+				cursor: default;
+				font-weight: bold;
+				color: #F37B1D;
+			}
+			
+			.sui-nav.nav-tabs> li {
+				margin-bottom: -1px;
+				background-color: #fff;
+				border-bottom: 1px #ccc solid;
+			}
+			
+			.sui-nav.nav-tabs> .active {
+				border-bottom: 0;
+			}
+			
+			.sui-nav.nav-tabs> li+ li {
+				margin-left: -3px;
+			}
+			
+			.yuan {
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				background-color: #64bdc5;
+				display: block;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 30px;
+				color: #fff;
+				font-size: 18px;
+				margin-top: 50px;
+			}
+			
+			.ng-footer {
+				height: 514px;
+				margin-top: 0;
+			}
+			
+			.ng-s-footer {
+				height: 130px;
+				background: none;
+				text-align: center;
+			}
+			
+			.ng-s-footer p.ng-url-list {
+				height: 25px;
+				line-height: 25px;
+			}
+			
+			.ng-s-footer p.ng-url-list a {
+				color: #666666;
+			}
+			
+			.ng-s-footer p.ng-url-list a:hover {
+				color: #f60;
+			}
+			
+			.ng-s-footer .ng-authentication {
+				float: none;
+				margin: 0 auto;
+				height: 25px;
+				width: 990px;
+				margin-top: 5px;
+			}
+			
+			.ng-s-footer p.ng-copyright {
+				float: none;
+				width: 100%;
+			}
+			
+			.root1200 .ng-s-footer p.ng-copyright {
+				width: 100%;
+			}
+			/*聊天框样式*/
+			
+			.send {
+				display: inline-block;
+				position: relative;
+				width: auto;
+				height: auto;
+				max-width: 80%;
+				padding: 0.5em;
+				border-radius: .5em;
+				/* 圆角 */
+				font-size: .6em;
+				overflow: hidden
+			}
+			
+			.my {
+				background: #9FE756;
+				margin-bottom: 20px;
+			}
+			
+			.other {
+				background: #9A9A9A;
+				color: white;
+				margin-bottom: 20px;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.active {
+				border-bottom: 1px solid white !important;
+			}
+			
+			#form ul,
+			#allform ul {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+			
+			.chat {
+				width: 100%;
+				clear: both;
+				display: table;
+				min-height: 32px
+			}
+			
+			.chat-imgl {
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin-right: 10px
+			}
+			
+			.chat-imgr {
+				width: 50px;
+				height: 50px;
+				float: right;
+				margin-left: 10px
+			}
+		</style>
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="ms-center" class="personal-member">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15" style="border: 0px;">
+						<h3 style="background-color:#fff ;padding: 15px;width: 980px; height: auto !important;">
+	                        <strong style="font-size: 16px;color: #333333;font-weight: bold;">我的消息</strong>
+						</h3>
+						<div id="mes_dh" class="mes_dh">
+							<ul>
+								<li data-base='form'>
+									<span>未读消息</span>
+									<i>(11)</i>
+								</li>
+								<li data-base='allform' class="mes_active">
+									<span>全部消息</span>
+									<i>(11)</i>
+								</li>
+							</ul>
+						</div>
+						<div>
+							
+							<!--未读消息  -->
+							<div id="form" class="mes_dh mes_nr">
+
+								<ul>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "CNDN博客频道" 正在被热评，去看看>></a>
+										<i>2015.11.21</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_yellow">寻款</span>
+										<a href="wechat_xxnr.html">【百度口碑】 "博客园"正在被热评，去看看>></a>
+										<i>2015.10.23</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "CNDN博客频道" 正在被热评，去看看>></a>
+										<i>2015.9.20</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "本友会" 正在被热评，去看看>></a>
+										<i>2015.7.27</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_blue">咨询</span>
+										<a href="wechat_xxnr.html">【百度口碑】 "肌肉网" 正在被热评，去看看>></a>
+										<i>2015.5.19</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "你关注的CSDN博客频道" 用户好评率为89%，快来看看吧！>></a>
+										<i>2014.9.24</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_red">认证</span>
+										<a href="#">【百度口碑】 "你关注的新浪微博" 用户好评率为89%，快来看看吧！>></a>
+										<i>2014.9.24</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 您关注的博客园，用户好评率为92%，快来看看吧>></a>
+										<i>2014.9.24</i>
+									</li>
+
+								</ul>
+								<!-- 	<div id="gwc_fy" class="gwc_fy">
+								<span class="gwc_ys">页数<i id="i1">1</i>/<i id="i2">2</i></span>
+								<a href="#" class="gwc_s">首页</a>
+								<a href="#" class="gwc_s">上一页</a>
+								<a href="#" class="gwc_s">下一页</a>
+								<a href="#" class="gwc_s">末页</a>
+							</div> -->
+								<div class="tcdPageCode" id="tcdPageCode1"></div>
+								<div id="btn_div" style="width:80%;margin:0 auto;height:40px;background:#FFC90E;text-align:center;line-height:40px;color:white;margin-top:20px">
+									<span id="btn_xk">我要寻款</span>
+								</div>
+							</div>
+							<!--全部消息  -->
+							<div id="allform" class="mes_dh  mes_nr hide">
+								<ul>
+									<li>
+										<span class="weidu"></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 您关注的新浪博客，用户好评率95%，快去看看吧！>></a>
+										<i>2015.10.27</i>
+									</li>
+									<li>
+										<span class="weidu"></span>
+										<span id="nr_tz2" class="mes_nr_red">认证</span>
+										<a href="#">【百度口碑】 您关注的博客园，用户好评率95%，快去看看吧！>></a>
+										<i>2016.2.27</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_blue">咨询</span>
+										<a href="wechat_xxnr.html">【百度口碑】 "热卖博客网"，正在被热评，去看看>></a>
+										<i>2014.10.3</i>
+									</li>
+									<li>
+										<span class="weidu"></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 您关注的新浪博客，用户好评率89%，快去看看吧！>></a>
+										<i>2015.11.27</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "CNDN博客频道" 正在被热评，去看看>></a>
+										<i>2014.10.27</i>
+									</li>
+									<li>
+										<span class="weidu"></span>
+										<span id="nr_tz2" class="mes_nr_red">认证</span>
+										<a href="#">【百度口碑】 "CNDN博客频道" 正在被热评，去看看>></a>
+										<i>2015.7.27</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_green">通知</span>
+										<a href="#">【百度口碑】 "博客园正在被热评" ，去看看>></a>
+										<i>2015.2.27</i>
+									</li>
+									<li>
+										<span class="weidu"><img src="../img/list.png"/></span>
+										<span id="nr_tz2" class="mes_nr_blue">咨询</span>
+										<a href="wechat_xxnr.html">【百度口碑】 "CNDN博客频道" 正在被热评，去看看>></a>
+										<i>2015.5.27</i>
+									</li>
+								</ul>
+								<!-- 	<div id="gwc_fy" class="gwc_fy">
+								<span class="gwc_ys">页数<i id="i1">1</i>/<i id="i2">2</i></span>
+								<a href="#" class="gwc_s">首页</a>
+								<a href="#" class="gwc_s">上一页</a>
+								<a href="#" class="gwc_s">下一页</a>
+								<a href="#" class="gwc_s">末页</a>
+							</div> -->
+								<div class="tcdPageCode" id="tcdPageCode2"></div>
+								<div id="btn_div" style="width:80%;margin:0 auto;height:40px;background:#FFC90E;text-align:center;line-height:40px;color:white;margin-top:20px">
+									<span id="btn_xk">我要寻款</span>
+								</div>
+							</div>
+						
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+		<script type="text/javascript" src="../js/safe/ms_common.min.js"></script>
+		<!--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>-->
+		<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+		<script type="text/javascript" src="fenye.js"></script>
+
+		<script>
+			com();
+			var n = 9;
+			$("#tcdPageCode1").createPage({
+				pageCount: n,
+				current: 1,
+				backFn: function(p) {
+					$('#ye').html(p);
+				}
+			});
+			$("#tcdPageCode2").createPage({
+				pageCount: n,
+				current: 1,
+				backFn: function(p) {
+					$('#ye').html(p);
+				}
+			});
+			$('#send').click(function() {
+				var content = $('#getContent').val();
+				if(content == '' || content == null) {
+					alert('请输入发送内容！');
+				} else {
+					var str = '<div class="width:100%;clear:both;display:table;min-height:32px">' +
+						'<img src="../img/1.jpg" style="width:50px;height:50px;float:right;margin-left:15px"><div class="send other fr">' + content + '</div>' +
+						'	<div style="clear:both"></div></div>';
+
+					$('#showcontent').append(str);
+					$('#getContent').val('');
+					window.location = "#chechatbottom"
+				}
+
+			});
+
+			function check() {
+				var str = "";
+				for(var i = 0; i < data.length; i++) {
+					if(id1) {
+						str += '<div class="chat"><img src="../img/1.jpg" class="chat-img"><div class="send my">' + data.id1 + '</div></div>';
+					} else {
+						str += '<div class="chat"><img src="../img/1.jpg" class="chat-imgr"><div class="send other fr">' + data.id2 + '</div><div style="clear:both"></div></div>';
+					}
+				}
+				if(str != '' || str != null) {
+					$('#showcontent').append(str);
+				}
+			}
+
+			function refresh() {
+				var str = ""
+				for(var i = 0; i < data.length; i++) {
+					if(id1) {
+						str += '<div class="chat"><img src="../img/1.jpg" class="chat-img"><div class="send my">' + data.id1 + '</div></div>';
+					} else {
+						str += '<div class="chat"><img src="../img/1.jpg" class="chat-imgr"><div class="send other fr">' + data.id2 + '</div><div style="clear:both"></div></div>';
+					}
+				}
+				if(str != '' || str != null) {
+					$('#showcontent').prepend(str);
+				}
+			}
+
+			$('#mes_dh').children('ul').children('li').click(function() {
+
+				$(this).removeClass('mes_active ').siblings().addClass('mes_active ');
+				var base = $(this).data('base');
+
+				$('#' + base).removeClass('hide').siblings().addClass('hide ');
+
+			});
+		</script>
+	</body>
+
+</html>

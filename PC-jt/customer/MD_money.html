@@ -1,0 +1,132 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/safe/css.css" />
+		<link rel="stylesheet" href="../css/safe/common.min.css" />
+		<link rel="stylesheet" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" href="../css/safe/personal_member.min.css" />
+		<link rel="stylesheet" href="../css/safe/Snaddress.min.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" href="../font1/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/Chase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			table {
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 50px;
+				text-align: center;
+			}
+			
+			tr {
+				border-bottom: 1px solid #5E5E5E;
+				height: 30px;
+			}
+			
+			td {
+				border: 0px;
+			}
+			
+			.MD_theader {
+				height: 40px;
+				background: #143C6F;
+				color: white;
+				font-weight: 400;
+			}			
+			.MD_theader td {
+				font-size: 15px;
+			}
+		</style>
+
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="ms-center" class="personal-member" style="padding-bottom: 20px;">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15 ms_table" style="border: 0px;height: 435px !important;">
+						<h3 style="background-color:#fff ;padding: 15px;width: 980px; height: auto;">
+	                        <strong style="font-size: 16px;color: #333333;font-weight: bold;">金额提现</strong>
+						</h3>
+						<div id="mes_dh" class="mes_dh">
+							<ul>
+								<li data-base="hy_form4">
+									<span>我的提现记录</span>
+								</li>
+							</ul>
+						</div>
+						<div id="mes_nr" class="mes_nr">
+							<table border="2px solid #A9B7B7" cellspacing="" cellpadding="">
+								<theader>
+									<tr class="MD_theader">
+										<td></td>
+										<td>金额</td>
+										<td>申请时间</td>
+										<td>完成时间</td>
+										<td>反馈</td>
+										<td>状态</td>
+									</tr>
+								</theader>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>0.01</td>
+										<td>2009-1-1</td>
+										<td>2010-1-1</td>
+										<td>审核中</td>
+										<td>完成</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>0.01</td>
+										<td>2009-1-1</td>
+										<td>2010-1-1</td>
+										<td>审核中</td>
+										<td>完成</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		</div>
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+		<!--<script type="text/javascript" src="js/ms_common.min.js"></script>-->
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/jquery.uploadView.js"></script>
+<script>
+	com();
+	$('#mes_dh').children('ul').children('li').click(function() {
+
+		$(this).removeClass('mes_active').siblings().addClass('mes_active ');
+		var base = $(this).data('base');
+
+		$('#' + base).removeClass('hide').siblings().addClass('hide ');
+
+	});
+</script>

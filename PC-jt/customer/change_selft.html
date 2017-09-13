@@ -1,0 +1,289 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/safe/css.css" />
+		<link rel="stylesheet" href="../css/safe/common.min.css" />
+		<link rel="stylesheet" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" href="../css/safe/personal_member.min.css" />
+		<link rel="stylesheet" href="../css/safe/Snaddress.min.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/vipcenter.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Chase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js"></script>
+		<script src="../js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.personalcontainer {
+				width: 100%;
+				display: table;
+				padding-top: 3em;
+			}
+			
+			.personalcontainer input {
+				background: none;
+				border: 0;
+				line-height: 45px;
+				padding-left: 1em;
+				width: 80%;
+			}
+			
+			.input-box {
+				width: 70%;
+				height: 45px;
+				margin: 1em auto;
+			}
+			
+			.box-left {
+				width: 10%;
+				height: 45px;
+				float: left;
+				/*box-shadow: 1px 1px 2px rgba(240, 240, 240, 0.2);*/
+				text-align: left;
+				padding-left: 4px;
+				line-height: 45px;
+				color: #50504E;
+			}
+			
+			.box-right {
+				width: 70%;
+				height: 45px;
+				line-height: 45px;
+				margin-left: 1%;
+				float: left;
+				background: rgba(154, 154, 154, 0.1);
+				box-shadow: 1px 1px 2px rgba(240, 240, 240, 0.2);
+			}
+			
+			.submitbtn {
+				width: 30%;
+				height: 40px;
+				background: #FE9900;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 10px;
+				font-size: 16px;
+				color: white;
+				margin: 0 auto;
+				box-shadow: 2px 2px 5px rgba(240, 240, 240, 0.4);
+			}
+			
+			.yuan {
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				background-color: #64bdc5;
+				display: block;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 30px;
+				color: #fff;
+				font-size: 18px;
+				margin-top: 50px;
+			}
+			
+			.ng-footer {
+				height: 514px;
+				margin-top: 0;
+			}
+			
+			.ng-s-footer {
+				height: 130px;
+				background: none;
+				text-align: center;
+			}
+			
+			.ng-s-footer p.ng-url-list {
+				height: 25px;
+				line-height: 25px;
+			}
+			
+			.ng-s-footer p.ng-url-list a {
+				color: #666666;
+			}
+			
+			.ng-s-footer p.ng-url-list a:hover {
+				color: #f60;
+			}
+			
+			.ng-s-footer .ng-authentication {
+				float: none;
+				margin: 0 auto;
+				height: 25px;
+				width: 990px;
+				margin-top: 5px;
+			}
+			
+			.ng-s-footer p.ng-copyright {
+				float: none;
+				width: 100%;
+			}
+			
+			.root1200 .ng-s-footer p.ng-copyright {
+				width: 100%;
+			}
+			
+			.cs_img {
+				width: auto;
+				display: table;
+				border: 1px solid black;
+				margin-top: 5%;
+				position: relative;
+				margin-left: 2.2%;
+			}
+		</style>
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="ms-center" class="personal-member" style="padding-bottom: 80px;">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15 ms_table" style="border: 0px;">
+						<div class="personalcontainer">
+							<div class="input-box">
+								<div class="box-left">姓名:</div>
+								<div class="box-right"><input type="text" placeholder="请输入姓名"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">密码:</div>
+								<div class="box-right"><input type="text" placeholder="请输入性别"></div>
+							</div>
+							<div class="input-box" style="height: auto;">
+								<div class="box-left">头像:</div>
+								<div class="control-group js_uploadBox js_div	">
+
+									<div class="btn-upload">
+										<input class="js_upFile" capture="camera" type="file" name="cover">
+									</div>
+									<div class="js_showBox cs_img">
+										<img src="http://www.gouguoyin.cn/template/default/images/weixin.png" style="width: 50px;">
+									</div>
+								</div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">地址:</div>
+								<div class="box-right"><input type="text" placeholder="请输入QQ号码"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">邮箱:</div>
+								<div class="box-right"><input type="text" placeholder="请输入邮箱"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">手机:</div>
+								<div class="box-right"><input type="text" placeholder="请输入公司名称"></div>
+							</div>
+							<div class="input-box">
+								<div class="submitbtn"><span>提交</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="hot_show" class="hot_show">
+				<div class="hs_top">
+					<h2>热销推荐</h2>
+					<span>查看更多》</span>
+				</div>
+				<div class="hs_bottom">
+					<div class="hsb_top">
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+					</div>
+					<div class="hsb_bottom">
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+						<div class="kuai">
+							<img src="../img/1.jpg" alt="" />
+							<span>冬鞋 春鞋 2016</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+
+		<!--<script type="text/javascript" src="js/ms_common.min.js"></script>-->
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/jquery.uploadView.js"></script>
+<script>
+	com();
+	$(".js_upFile").uploadView({
+		uploadBox: '.js_uploadBox', //设置上传框容器
+		showBox: '.js_showBox', //设置显示预览图片的容器
+		width: 100, //预览图片的宽度，单位px
+		height: 100, //预览图片的高度，单位px
+		allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+		maxSize: 2, //允许上传图片的最大尺寸，单位M
+		success: function(e) {
+			$(".js_uploadText").text('更改');
+			alert('图片上传成功');
+		}
+	});
+	$('#mes_dh').children('ul').children('li').click(function() {
+
+		$(this).removeClass('mes_active').siblings().addClass('mes_active ');
+		var base = $(this).data('base');
+
+		$('#' + base).removeClass('hide').siblings().addClass('hide ');
+
+	});	
+</script>

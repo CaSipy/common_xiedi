@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="m.178hui.com" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>鞋城在手</title>
+<link href="../frozenui/css/frozen.css" rel="stylesheet" type="text/css">
+<link href="../css/public.css" rel="stylesheet" type="text/css" />
+<link href="../css/xinxi.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../css/vip.css"/>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/xinxi.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+<script>
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(350).fadeOut("slow");
+})
+
+</script>
+<style>
+	input{
+		background: none;
+		border: 0;
+	}
+	.personalcontainer{width:100%;display:table;padding-top:3em;}
+	.input-box{width:80%;height:35px;margin:1em auto;}
+	.box-left{width:27%;height:35px;float:left;background:rgba(154,154,154,0.1);box-shadow: 1px 1px 2px rgba(240,240,240,0.2);text-align: left;padding-left:4px;line-height: 35px;color:#50504E;}
+	.box-right{width:70%;height:35px;float:right;background:rgba(154,154,154,0.1);box-shadow: 1px 1px 2px rgba(240,240,240,0.2);}
+	input{line-height: 35px;padding-left:1em;width:80%;}
+	.submitbtn{width:30%;height:40px;background:#FE9900;text-align: center;line-height: 40px;border-radius:10px;color:white;margin:0 auto;}
+</style>
+</head>
+<body>
+<div class="mobile">
+	<!--页面加载 开始-->
+  <div id="preloader">
+    <div id="status">
+      <p class="center-text"><span>拼命加载中···</span></p>
+    </div>
+  </div>
+  <!--页面加载 结束--> 
+  <!--header 开始-->
+  <header>
+    <div class="header"> <a class="new-a-back" href="javascript:history.back();"> <span><img src="../images/iconfont-fanhui.png"></span> </a>
+      <h2>个人资料修改</h2>
+      </div>
+  </header>
+  <!--header 结束-->
+  <div class="personalcontainer">
+  	<div class="input-box">
+  		<div class="box-left">姓名:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入姓名"></div>
+  	</div>
+  	<div class="input-box">
+  		<div class="box-left">性别:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入性别"></div>
+  	</div>
+  	<div class="input-box">
+  		<div class="box-left">手机号码:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入手机号码"></div>
+  	</div>
+  		<div class="input-box">
+  		<div class="box-left">QQ号码:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入QQ号码"></div>
+  	</div>
+  		<div class="input-box">
+  		<div class="box-left">邮箱:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入邮箱"></div>
+  	</div>
+  		<div class="input-box">
+  		<div class="box-left">公司名称:</div>
+  		<div class="box-right"><input type="text" placeholder="请输入公司名称"></div>
+  	</div>
+  	<div class="input-box"><span>注：每完善一项个人资料将获得5积分。</span></div>
+  	<div class="input-box">
+  		<div class="submitbtn"><span>提交</span></div>
+  	</div>
+  </div>
+  
+
+</body>
+</html>
+<script>
+	com();
+</script>

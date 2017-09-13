@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/amazeui.min.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<!--<script src="../js/amazeui.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<link rel="stylesheet" href="../css/regedit.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<title></title>
+		<style>
+			.bottomLine {
+				border-bottom: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+				padding-top: 8px;
+				/*padding-bottom:10px;*/
+			}
+			
+			.bot {
+				margin-bottom: 50px;
+				/*text-align: center;*/
+				color: #7b6f5b;
+			}
+			
+			.radio-pretty.checked> span:before {
+				color: #f88600;
+			}
+			
+			input {
+				height: 62px;
+			}
+			
+			.radio-pretty span:before {
+				margin-right: 2px;
+				vertical-align: -4px;
+				font-size: 20px;
+				color: #bdbdbd;
+				margin-left: -2px;
+			}
+			
+			.logo_wh {
+				width: 285px;
+				height: 127px;
+			}
+			
+			.login_i {
+				width: 11.1%;
+				font-style: normal;
+				display: block;
+				float: left;
+			}
+			
+			.gs1{
+				position: relative;
+				background-image: url(../img/verify1.png);
+				width: 400px;
+				height: 60px;
+				z-index: 10000;
+				top: 30px;
+				left: 250px;
+			}
+			.gs1 p{
+				position: absolute;
+				width: 100%;
+				height: 60px;
+				margin: 0px;
+				font-size: 20px;
+				font-weight: 500;
+				line-height: 66px;
+				padding: 0;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="am-g">
+			<div class="logo"> 
+				<a href="pc_index.html"><img class="logo_wh" src="../img/sclogo.png" /></a>
+			</div>
+		</div>
+		<div class="am-g" style="margin-top: -30px;">
+			<div style="width: 999px;margin: 0 auto;font-size: 14px;"> <span style="float: right;color: #333333;">我已注册，马上<a href="login.html" style="color: #F88600;">登录</a></span>
+			</div>
+		</div>
+		<div class="am-g content" style="margin-top: 12px;" id="re_content">
+			<div data-am-widget="tabs" class="am-tabs am-tabs-d2">
+				<ul class="am-tabs-nav am-cf" style="margin-top: 74px; width: 100%;">
+					<li class="" style="max-width: 95px; margin-left: 100px;"></li>
+					<li class="am-active" id="Lpho">
+						<a href="javascript:;"><span class="am-badge am-round am-badge-warning-active " style="vertical-align: middle;margin-top:-4px;">1</span>设置登录名</a>
+					</li>
+					<li class="" id="Lpass">
+						<a href="javascript:;"><span class="am-badge  am-round" style="vertical-align: middle;margin-top:-4px;">2</span>设置用户信息</a>
+					</li>
+					<li class="" id="Lsus">
+						<a href="javascript:;"><span class="am-badge  am-round" style="vertical-align: middle;margin-top:-4px;">3</span>注册成功</a>
+					</li>
+					<li class="" style="    max-width: 95px;margin-right: 100px;"></li>
+				</ul>
+				<div id="am-tabs-bd" class="am-tabs-bd" style="margin-top: 59px;margin-left: -20px;">
+					<div data-tab-panel-0 class="am-tab-panel am-active" id="pho">
+						<div class="am-g">
+							<div class="am-u-sm-7 am-u-sm-offset-3 "> <span class="left1"></span> <input type="text" id="phone_num" placeholder="请输入您的手机号" class="am-form-field" style="margin: auto;display: block;float: left;padding-left: 55px;width: 528px" /> </div>
+							<div class="am-u-sm-1 am-u-end" style="padding: 10px;"> <span class="right" style="display: none;"></span> </div>
+						</div>
+						<div class="am-g" style="margin-top: 37px;">
+							<div class="am-u-sm-4 am-u-sm-offset-3" style="padding-right: 0rem;"> <span class="left2"></span><input type="text" id="yzm_num" placeholder="请输入短信验证码" class="am-form-field" style="margin: auto;display: block;float: left;padding-left: 55px;width: 360px;" /> </div>
+							<div class="am-u-sm-3 am-u-end" style="padding-left: 0rem;"> <button type="button" class="am-btn am-btn-default" style="width: 190px;    float: left;height: 62px;">获取短信验证码</button> </div>
+						</div>
+						<div class="am-g" style="margin-top: 21px;">
+							<form class="sui-form">
+								<div class="am-u-sm-7 am-u-sm-offset-3" style="padding-right: 0rem;"> <label class="checkbox-pretty inline checked"> <input type="checkbox" checked="checked"><span style="font-size: 12px;color: #878787;">同意<a>《用户服务协议》</a></span> </label> </div>
+							</form>
+						</div>
+						<div class="am-g" style="margin-top:112px;">
+							<div class="am-u-sm-7 am-u-sm-offset-3 "> <button type="button" id="tongyi" class="am-btn am-btn-warning" style="width: 528px;padding: 20px;border: 1px rgba(187, 187, 187, 0.5) solid;"><font style="font-size: 20px;font-weight: bold;">同意协议并注册</font></button> </div>
+						</div>
+						<div class="am-g" style="margin-top: 20px;margin-bottom: 135px;">
+							<div class="am-u-sm-7 am-u-sm-offset-3" style="padding-right: 0rem;">
+								<a style="font-size: 14px;">您也可以使用邮箱注册></a>
+							</div>
+						</div>
+					</div>
+					<!--设置用户信息-->
+					<div data-tab-panel-1 class="am-tab-panel " id="pass">
+						<div class="am-g">
+							<div class="am-u-sm-6 am-u-sm-offset-3 "> <span class="left3"></span> <input type="password" id="pass_num" placeholder="请输入密码" class="am-form-field" style="margin: auto;display: block;float: left;padding-left: 59px;width: 100%;position: relative;" /> </div>
+						</div>
+						<div class="am-g" style="margin-top: 36px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 "> <span class="left3"></span> <input type="password" id="repass_num" placeholder="请再次输入密码" class="am-form-field" style="margin: auto;display: block;float: left;padding-left: 59px;width: 100%;position: relative;" /> </div>
+						</div>
+						<!--<div class="am-g" style="margin-top: 16px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 ">
+								<span style="margin-left:12px;"> 是否有上级:<label data-toggle="radio" class="radio-pretty inline checked"> <input type="radio" checked="checked" name="radio1"><span>有</span></label> 
+								<label data-toggle="radio" class="radio-pretty inline" style="margin-left: 34px;"> <input type="radio" name="radio1"><span>无</span> </label>									</div>
+						</div>-->
+						<!--<div class="am-g" style="margin-top: 16px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 "> <span class="left4"></span> <input type="text" placeholder="请输入您的上级" class="am-form-field" style="margin: auto;display: block;float: left;padding-left: 59px;width: 100%" /> </div>
+						</div>-->
+						<div class="am-g" style="margin-top: 58px;margin-bottom: 80px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 "> <button type="button" id="btn_qr" class="am-btn am-btn-warning" style="width: 100%;height: 62px;font-size: 20px;font-weight: bold;border: 1px rgba(187, 187, 187, 0.5) solid;">确认</button> </div>
+						</div>
+					</div>
+					<!--成功-->
+					<div data-tab-panel-2 class="am-tab-panel " id="sus">
+						<!--<div class="am-g"> <div class="am-u-sm-12" style="text-align: center;"> <img src="img/lion.png" /> </div> </div>-->
+						<div class="am-g" style="margin-top: 90px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 " style="    text-align: center;">
+								<h2 style="color: #8F8F8F;font-size: 20px;">恭喜您，152******64账号注册成功</h2> </div>
+						</div>
+
+						<div class="am-g" style="margin-top: 176px;margin-bottom: 124px;">
+							<div class="am-u-sm-6 am-u-sm-offset-3 "> <button type="button" id="btn_wc" class="am-btn am-btn-warning" style="width: 100%;height: 62px;font-size: 20px;font-weight: bold;border: 1px rgba(187, 187, 187, 0.5)B solid;">完成</button> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="am-g " style="margin-top: 81px;text-align: center;font-size: 12px;">
+			<div class="bottomLine" style="margin:0 auto; text-align:center;width:700px;height: 35px;">
+				<span style="word-spacing:0.52rem; text-align: center;    width: 100%;"><i class="login_i">帮助中心</i><i class="login_i"> | </i><i class="login_i">支付方式</i><i class="login_i"> | </i><i class="login_i">售后服务</i><i class="login_i"> | </i><i class="login_i">客服中心</i><i class="login_i"> | </i><i class="login_i">关于我们</i>
+			</span>
+			</div>
+		</div>
+		<div class="am-g">
+			<div class="bot ">
+				<div style="margin:0 auto;width:700px;height: 30px;">
+					<p style="font-size: 12px; text-align:center; line-height: 10px;">WWW.YOURDI.COM.CN 版权所有 2016 ICP证：粤*******</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--<div class="_gs" id="phone_gs"><p>手机号码格式不正确</p></div>
+		<div id="yzm_gs" class="_gs" style="top: 448px; left: 650px;"><p>验证码不正确</p></div>-->
+		<div id="pass_gs" class="_gs"><p>密码长度不够</p></div>
+		<!--<div id="repass_gs" class="_gs" style="top: 448px;"><p>两次密码不一致</p></div>-->
+	</body>
+
+</html>
+<script type="text/javascript">
+//第一块填写信息
+//	手机号码
+	 
+	var str='<div id="pass_gs" class="gs1"><p>密码长度不够</p></div>';
+	$('#re_content input').click(function(){
+		$('#pass_gs').remove();
+	});
+	$('#tongyi').click(function(){
+		var reg1=/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+		if($('#phone_num').val().match(reg1)){
+			if($('#yzm_num').val()!='123'){
+				$('#pass_gs').remove();
+				$('#yzm_num').after(str);
+				
+			}else{
+				$('#pho').removeClass('am-active');
+				$('#pass').addClass('am-active');
+				$('#Lpho').removeClass('am-active');
+				$('#Lpass').addClass('am-active');
+				$('#Lpho').children('a').children('span').removeClass('am-badge-warning-active');				
+				$('#Lpass').children('a').children('span').addClass('am-badge-warning-active');
+			}
+			
+			
+		}
+		else{ 
+			
+				$('#pass_gs').remove();
+				$('#phone_num').after(str);
+			
+		}
+		
+	});
+
+//第二块填写信息
+	$('#btn_qr').click(function(){
+		var reg=/^[0-9A-Za-z]{6,}$/;
+		if($("#pass_num").val().match(reg)){
+			if($("#pass_num").val()!=$("#repass_num").val()){
+				$('#pass_gs').remove();
+				$('#repass_num').after(str);
+			}
+			else{
+				$('#pass').removeClass('am-active');
+				$('#sus').addClass('am-active');
+				$('#Lpass').removeClass('am-active');
+				$('#Lsus').addClass('am-active');
+				$('#Lpass').children('a').children('span').removeClass('am-badge-warning-active');				
+				$('#Lsus').children('a').children('span').addClass('am-badge-warning-active');
+			}
+		}else{
+			$('#pass_gs').remove();
+			$('#pass_num').after(str);
+		}
+	});
+//注册完成
+	$('#btn_wc').click(function(){
+		location.href='wirte_self.html';
+	});
+</script>

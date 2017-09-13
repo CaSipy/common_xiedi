@@ -1,0 +1,108 @@
+
+
+a {
+	color: #2d2f30;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	-ms-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+a:focus {
+	outline: none;
+}
+
+.sx_content {
+	display: table;
+	margin: auto;
+	width: 100%;	
+}
+
+.sx_updown {
+	width: 94%;
+	background: #fff;
+	overflow: hidden;
+	z-index: 9999;
+	text-align: left;
+	margin: 2% 3%;
+	padding:0;
+}
+
+.updown_box {
+	float: left;
+	min-height: 0px;
+	width: 100%;
+/*	border-left: 1px solid #f2f2f2;*/
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.updown_box h3 {
+	font-size: 16px;
+	font-style: normal;
+	font-family: "微软雅黑";
+	margin-bottom: 18px;
+	padding-left: 10px;
+	width: 100%;
+}
+
+.updown_box ul li {
+	float: left;
+	margin: 0 10px 10px 10px;
+}
+
+.updown_box ul li a {
+	display: block;
+	font-size: 14px;
+	padding: 6px 8px;
+	line-height: 18px;
+}
+
+.updown_box ul li.selected a {
+	background: #7ecbc8;
+	color: #fff;
+}
+
+.w136 {
+	width: 100%;
+	border-left: 0;
+	padding: 0;
+}
+
+.w290 {
+	width: 100%;
+}
+
+.w160 {
+	width: 100%;
+}
+
+.sousuo {
+	padding: 10px 0 10px 0;
+	width: 96%;
+	height: auto;
+}
+
+.select-result {
+	width: 100%;
+	float: left;
+}
+
+.select-result ul li a {
+	height: 30px;
+	padding: 0 24px 0 10px;
+	line-height: 30px;
+	display: block;
+	position: relative;
+	float: left;
+	margin: 0 10px 10px 0;
+	color: #fff;
+	font-size: 14px;
+	background:url(../img/close1.png) 90% center no-repeat #7ecbc8;
+}
+.sousuo_left{
+	margin-left: 18% !important;
+	color: black !important;
+}

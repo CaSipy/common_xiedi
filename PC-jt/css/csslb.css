@@ -1,0 +1,233 @@
+/* CSS Document */
+
+
+/*轮播页*/
+
+img {
+	border: 0;
+}
+
+.play {
+	width: 100%;
+	margin: 0px auto 0;
+	background: #999;
+	font: 12px;
+}
+
+.big_pic {
+	width: 100%;
+	height: 226px;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	background: #222;
+	position: relative;
+}
+
+.big_pic li {
+	width: 100%;
+	height: 226px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.big_pic li img {
+	width: 100%;
+	height: 226px;
+}
+
+.mark_left {
+	width: 50%;
+	height: 226px;
+	display: block;
+	float: left;
+	background: red;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 3000;
+}
+
+.mark_right {
+	width: 50%;
+	height: 226px;
+	display: block;
+	float: left;
+	background: green;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 3000;
+}
+
+.big_pic .bg {
+	width: 100%;
+	height: 25px;
+	background: #000;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	position: absolute;
+	z-index: 2999;
+	bottom: 0;
+	left: 0;
+}
+
+
+/*显示*/
+
+.small_pic {
+	width: 100%;
+	height: 64px;
+	margin-top: 5px;
+	letter-spacing: 0%;
+	overflow: hidden;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+
+/*隐藏*/
+
+.small_pic_off {
+	height: 0px !important;
+}
+
+.small_pic1 {
+	overflow: hidden;
+}
+
+.small_pic {
+	width: auto;
+	height: 64px;
+	overflow: hidden;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.small_pic li {
+	width: 74px;
+	height: 64px;
+	float: left;
+	cursor: pointer;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+.small_pic img {
+	width: 90%;
+	height: 64px;
+}
+
+div,
+p {
+	display: block;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: #114477
+}
+
+.clear {
+	clear: both;
+}
+
+#body {
+	width: 400px;
+	margin: 20px auto
+}
+
+#con {
+	clear: both
+}
+
+
+/*Gpic*/
+
+.Gpic {
+	width: 300px;
+	height: 412px;
+	padding-top: 55px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.cxpng {
+	position: absolute;
+	left: 7px;
+	top: 10px;
+	z-index: 100;
+}
+
+.Gpic .pic {
+	width: 298px;
+	padding: 10px 0;
+	height: 337px;
+	position: relative;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.Gpic .pic img {
+	width: 213px;
+	height: 317px;
+	margin: 0 auto;
+}
+
+.Xgt {
+	width: 300px;
+	height: 68px;
+	float: left;
+	padding: 9px 0 0 0
+}
+
+.Xgt .Al {
+	width: 23px;
+	height: 68px;
+	float: left;
+	margin-left: 2px;
+	display: inline;
+}
+
+.Xgt .zgt {
+	width: 249px;
+	margin-left: 1px;
+	float: left;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+.Xgt .zgt ul {
+	width: 1000px
+}
+
+.Xgt .zgt li {
+	width: 56px;
+	float: left;
+	height: 68px;
+	margin-right: 6px;
+}
+
+.Xgt .zgt li img {
+	width: 54px;
+	height: 54px;
+	float: left;
+	border: 1px solid #9c9c9c;
+}
+
+.Xgt .Ar {
+	width: 23px;
+	height: 68px;
+	float: left;
+}

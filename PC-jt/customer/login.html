@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/amazeui.min.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/amazeui.min.js"></script>
+		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../js/login.js" ></script>
+		<title></title>
+		<style>
+			.bottomLine{
+				border-bottom: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+				padding-top:8px;
+				/*padding-bottom:10px;*/
+				
+			}
+			.bot{
+				/*margin-top: 5px;*/
+				margin-bottom: 49px;
+				/*text-align: center;*/
+				color: #7b6f5b;
+			}
+			.verify{
+				width: 150px;
+				height: 40px;
+				position: absolute;
+				right: 0px;
+				top: 100px;
+				z-index: 10000;
+				background: url(../img/verify.png) no-repeat center;
+				background-size: cover;
+				display: none;
+			}
+			.p{
+				height: 40px;
+				line-height: 47px;
+				margin: 0px 30px 0px 50px;
+				font-size: 14px;
+				
+			}
+		</style>
+	</head>
+     
+	<body>
+	
+		<div class="am-g" >
+			<div style="width: 1200px;margin: 0 auto; display: table;">
+			<div class="logo" >
+				<a href="pc_index.html"><img class="logo_wh" src="../img/sclogo.png" /></a>
+			</div>
+			<div style="float: right;margin-right: 60px;margin-top: 48px;">
+				<span style="float: right;font-size: 12px;margin-left: 5px;color: #7d7d7d;"><span style="background-image: url(../img/massageicon.png);width: 20px;height: 20px;margin-top:4px;float: left;background-repeat: no-repeat;margin-right: 8px;"></span>对登录页面的建议</span>
+			</div>
+			</div>
+		</div>
+		<div class="am-g content">
+			<div style="width:1200px;margin:0 auto;position: relative;z-index: 999;">
+				<div class="loginDiv " style="display: block;"  id="login" >
+						<div class="am-u-sm-12" style="padding-right: 0rem">
+							<img src="../img/erweima.png" style="float: right;height: 58px;" id="loginimg"/ >	
+						</div>
+				<div class="am-u-sm-12" style="padding-left: 30px;padding-right: 30px; position: relative; left: 0; top: 0;">
+					<h4 style="font-weight: normal;">欢迎登录</h4>
+				 	<span class="left1"></span>	
+				 	<input type="text" id="login_id" class="am-form-field"  placeholder="邮箱/手机号/用户名" style="padding-left: 50px;margin-top: 48px;font-size: 12px;"/>
+					<div class="verify" id="no_id">
+						<p class="p">账号不存在</p>
+					</div>
+				</div>	
+				 
+				<div class="am-u-sm-12" style="margin-top: 21px;padding-left: 30px;padding-right: 30px; position: relative; top: 0; left: 0;">
+				 	<span class="left2"></span>
+					<input type="password" id="passWord" class="am-form-field"  placeholder="请输入密码"style="padding-left: 50px;font-size: 12px;"/>
+				    <div class="verify" style="top: 35px;" id="wrongPass">
+						<p class="p">密码不正确</p>
+					</div>
+				</div>	
+				 <div class="am-u-sm-12" style="margin-top: 12px;padding-left: 30px;padding-right: 30px;font-size: 12px;color: #757575;">
+				    <input type="checkbox" style="margin-top:1px;vertical-align:middle;"/><span style="margin-bottom:-1px;margin-left: 10px;font-size: 12px;vertical-align: middle;">自动登录</span>
+				 </div>	
+				
+				<div class="am-u-sm-12" style="margin-top: 45px;padding-left: 30px;padding-right: 30px;">
+				<button type="button" id="btn_login" class="am-btn am-btn-warning" style="width: 100%;+width:83%; border-radius: 5px;font-size: 16px;" >登录</button>	
+				</div>
+				<div class="am-u-sm-12" style="padding-left: 30px;padding-right: 30px;">
+					<p style="width: 100%;+width: 82%; margin-top: 15px;font-size: 12px;color: #333333;">忘记登录密码 <a href="regedit.html" style="float: right;">免费注册</a></p>
+				</div>
+				
+				</div>
+				<!--扫码页面-->
+				<div class="loginDiv" style="display: none;" id="erm"  >
+						<div class="am-u-sm-12" style="padding-right: 0rem">
+						<img src="../img/pc_2.png" style="float: right;" id="ermimg" />						
+						</div>
+					<div class="am-u-sm-12" style="padding-left: 30px;padding-right: 30px;margin-top: 30px;text-align: center;">
+					<h4 >手机扫码，安全登录</h4>
+				</div>	
+				 <div class="am-u-sm-12" style="padding-left: 30px;padding-right: 30px;margin-top: 50px;text-align: center;">
+				 <img src="../img/aerweima.png" />
+				 </div>	
+				 
+				 <div class="am-u-sm-12" style="margin-top: 50px;padding-left: 30px;padding-right: 30px;text-align: center;">
+				  <p style="font-size: 14px;">请使用买啦网客户端扫描二维码登录</p>
+				    <p style="text-align: center;"><span style="background-image: url(../img/Download-512.png);float: left;width: 20px;height: 20px;margin-top:5px;background-repeat: no-repeat;margin-left: 100px;"></span>
+				<a style="float: left;font-size: 12px;"> 下载买啦客户端</a></p> 
+				 </div>	
+				<div class="am-u-sm-12" style="margin-top: 10px;padding-left: 30px;padding-right: 30px;margin-bottom: 100px;">
+				</div>
+				
+				</div>
+			</div>
+		</div>
+		<div class="am-g " style="margin-top: 81px;text-align: center;font-size: 12px;">
+			<div class="bottomLine" style="margin:0 auto; text-align:center;width:700px;height: 35px;">
+			<span style="word-spacing:0.52rem; text-align: center;    width: 100%;"><i class="login_i">帮助中心</i><i class="login_i"> | </i><i class="login_i">支付方式</i><i class="login_i"> | </i><i class="login_i">售后服务</i><i class="login_i"> | </i><i class="login_i">客服中心</i><i class="login_i"> | </i><i class="login_i">关于我们</i>
+			</span>
+			</div>
+	    </div>	
+	    <div class="am-g" >
+				<div class="bot ">
+					<div  style="margin:0 auto;width:700px;height: 30px;">
+				<p style="font-size: 12px; text-align:center; line-height: 10px;">WWW.YOURDI.COM.CN 版权所有 2016 ICP证：粤*******</p>
+					</div>
+					</div>
+		</div>
+		
+		
+	</body>
+
+</html>
+<script>$('#btn_login').click(function() {
+	for(var i=0;
+	i < 1;
+	i++) {
+		if($('#login_id').val() !='123') {
+			$('#no_id').css('display', 'block');
+		}
+		else {
+			if($('#passWord').val()=='123') {
+				location.href='pc_index.html';
+			}
+			else {
+				$('#wrongPass').css('display', 'block')
+			}
+		}
+	}
+}
+
+);
+$('#login_id').click(function() {
+	$('#no_id').css('display', 'none');
+	$('#wrongPass').css('display', 'none');
+}
+
+);
+$('#passWord').click(function() {
+	$('#no_id').css('display', 'none');
+	$('#wrongPass').css('display', 'none');
+}
+
+);</script>

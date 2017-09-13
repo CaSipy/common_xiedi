@@ -1,0 +1,121 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/safe/css.css" />
+		<link rel="stylesheet" href="../css/safe/common.min.css" />
+		<link rel="stylesheet" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" href="../css/safe/personal_member.min.css" />
+		<link rel="stylesheet" href="../css/safe/Snaddress.min.css" />
+		<link rel="stylesheet" href="../css/sui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<link rel="stylesheet" href="font1/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/Chase.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/sui.js"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.gM_p{
+				width: 80%;
+				height: 40px;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.gM_span{
+				width: 27%;
+				font-size: 16px;
+				line-height: 40px;
+				display: block;
+				height: 40px;
+			}	
+			.gM_txt{
+				height: 40px;
+				width: 68%;
+				border: 2px solid #a9b7b7;
+				padding-left: 2%;
+				font-size: 14px;
+				border-radius: 5px;
+			}
+			.send_yzm{
+				width: 20%;
+				height: 40px;
+				font-size: 16px;
+			}
+		</style>
+		
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="theader"></div>
+		<div id="ms-center" class="personal-member" style="padding-bottom: 20px;">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15 ms_table" style="border: 0px;">
+						<h3 style="background-color:#fff ;padding: 15px;width: 980px; height: auto;">
+	                        <strong style="font-size: 16px;color: #333333;font-weight: bold;">金额提现</strong>
+						</h3>
+						<div id="mes_dh" class="mes_dh">
+							<ul>
+								<!--<li data-base="hy_form1">
+									<span>免费会员</span>
+								</li>
+								<li data-base="hy_form2" class="mes_active">
+									<span>VIP会员</span>
+								</li>
+								<li data-base="hy_form3" class="mes_active">
+									<span>SVIP会员</span>
+								</li>-->
+								<li data-base="hy_form4">
+									<span>提交申请</span>
+								</li>
+							</ul>
+						</div>
+						<div id="mes_nr" class="mes_nr">
+								<form action="" style="margin-left: 10% !important; margin-top: 5%; width: 81%;">
+									<p class="gM_p"><span class="gM_span">请输入提现金额：</span><input type="text" name="im_money" id="im_money" placeholder="请输入提现金额" class="gM_txt" /></p>
+									<p class="gM_p"><span class="gM_span">请输入手机号码：</span><input type="text" name="im_money" id="im_money" placeholder="请输入手机号码" class="gM_txt" /></p>
+									<p class="gM_p">
+										<span class="gM_span">请输入验证码：</span><input type="text" name="im_money" id="im_money" placeholder="请输入验证码" class="gM_txt" style="width: 30% !important;" />
+										<input type="button" name="gM_btn" id="gM_btn" value="获取验证码" class="send_yzm" />
+									</p>
+									<input type="button" name="hy_submit" id="hy_submit" value="提交" class="hy_submit" style="margin: 8% 14% 0% !important;" />
+								</form>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+		<!--<script type="text/javascript" src="js/ms_common.min.js"></script>-->
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/jquery.uploadView.js"></script>
+<script>
+	com();
+	$('#mes_dh').children('ul').children('li').click(function() {
+
+		$(this).removeClass('mes_active').siblings().addClass('mes_active ');
+		var base = $(this).data('base');
+
+		$('#' + base).removeClass('hide').siblings().addClass('hide ');
+
+	});
+</script>

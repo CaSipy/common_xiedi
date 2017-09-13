@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../js/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script> 
+			<!--导入DWR引擎  -->
+		<script type="text/javascript" src="../../dwr/util.js"></script>
+		<script type="text/javascript" src="../../dwr/engine.js"></script>
+		<script type="text/javascript" src="../../dwr/interface/_ProductAdminBODwr_js.js"></script>
+		<style>
+		input{outline: none}
+		*{margin:0;padding:0;}
+			.personalcontainer {
+				width: 100%;
+				display: table;
+				padding-top: 3em;
+			}
+			
+			.personalcontainer input {
+				background: none;
+				border: 0;
+				line-height: 45px;
+				padding-left: 1em;
+				width: 80%;
+			}
+			
+			.input-box {
+				width: 70%;
+				height: 45px;
+				margin: 1em auto;
+			}
+			.input-box1 {
+				width: 70%;
+				height: 45px;
+			}
+			
+			.box-left {
+				width: auto;
+				height: 45px;
+				float: left;
+				font-family: '微软雅黑';
+				/*box-shadow: 1px 1px 2px rgba(240, 240, 240, 0.2);*/
+				text-align: left;
+				padding-left: 4px;
+				line-height: 45px;
+				color: #50504E;
+			}
+			
+			.box-right {
+				width: 80%;
+				height: 45px;
+				line-height: 45px;
+				margin-left: 1%;
+				float: right;
+				background: rgba(154, 154, 154, 0.1);
+				box-shadow: 1px 1px 2px rgba(240, 240, 240, 0.2);
+			}
+			.box-right1 {
+				width: 30%;
+				height: 45px;
+				line-height: 45px;
+				margin-left: 1%;
+				float: left;
+				background: rgba(154, 154, 154, 0.1);
+				box-shadow: 1px 1px 2px rgba(240, 240, 240, 0.2);
+			}
+			
+			.submitbtn {
+				width: 30%;
+				height: 40px;
+				background: #FE9900;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 10px;
+				font-size: 16px;
+				color: white;
+				margin: 0 auto;
+				box-shadow: 2px 2px 5px rgba(240, 240, 240, 0.4);
+			}
+			
+			.yuan {
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				background-color: #64bdc5;
+				display: block;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 30px;
+				color: #fff;
+				font-size: 18px;
+				margin-top: 50px;
+			}
+			
+			.ng-footer {
+				height: 514px;
+				margin-top: 0;
+			}
+			
+			.ng-s-footer {
+				height: 130px;
+				background: none;
+				text-align: center;
+			}
+			
+			.ng-s-footer p.ng-url-list {
+				height: 25px;
+				line-height: 25px;
+			}
+			
+			.ng-s-footer p.ng-url-list a {
+				color: #666666;
+			}
+			
+			.ng-s-footer p.ng-url-list a:hover {
+				color: #f60;
+			}
+			
+			.ng-s-footer .ng-authentication {
+				float: none;
+				margin: 0 auto;
+				height: 25px;
+				width: 990px;
+				margin-top: 5px;
+			}
+			
+			.ng-s-footer p.ng-copyright {
+				float: none;
+				width: 100%;
+			}
+			
+			.root1200 .ng-s-footer p.ng-copyright {
+				width: 100%;
+			}
+			/*添加图片区域*/
+			.addstyle{width:14%;padding-bottom:14%;float:left;background:url('../img/add.png') no-repeat center;background-size:cover;position: relative;margin-left:10px;}
+			.addimgcontain{width:70%;height:auto;display:table;border:1px solid black;margin:0 auto;}
+			.filestyle{opacity:0;position:absolute;left:10px;top:10px;padding:40px 10px;font-size:15px;}
+		</style>
+	</head>
+
+	<body class="ms-body">
+		<div id="" class="ng-top-banner"></div>
+		<div id="top"></div>
+		<div id="header"></div>
+		<div id="ms-center" class="personal-member" style="padding-bottom: 80px;">
+			<div class="cont">
+				<div id="cont1"></div>
+				<div class="cont-main">
+					<div class="main-wrap mt15 ms_table" style="border: 0px;">
+						<div class="personalcontainer">
+						<form name="Contentform" id="Contentform">
+							<div class="input-box">
+								<div class="box-left">商品名称:</div>
+								<div class="box-right"><input name="product_name" type="text" placeholder="请输入商品名称"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">英文名称:</div>
+								<div class="box-right"><input type="text" name="product_name_en" placeholder="请输入英文名称"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">产品编号:</div>
+								<div class="box-right"><input type="text" name="product_code" placeholder="请输入产品编号"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">大货指导价:</div>
+								<div class="box-right"><input type="text" name="big_price" placeholder="请输入大货指导价"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">样品价:</div>
+								<div class="box-right"><input type="text" name="example_price" placeholder="请输入样品价"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">产品描述:</div>
+								<div class="box-right"><input type="text" name="product_intro" placeholder="请输入样品价"></div>
+							</div>
+							<div class="input-box">
+								<div class="box-left">产品描述(英文):</div>
+								<div class="box-right"><input type="text" name="product_intro_en" placeholder="请输入样品价"></div>
+							</div>
+							<div class="input-box">
+								<div style="width:50%;float:left;height:40px;line-height:40px">
+									<p style="float:left">所属标签组:</p>
+									
+										<select style="width:100px;height:30px;margin-left:100px" onchange="select(this)" id="select1">
+										  <option value ="volvo">Volvo</option>
+										  <option value ="saab">Saab</option>
+										  <option value="opel">Opel</option>
+										  <option value="audi">Audi</option>
+										</select>
+									
+								</div>
+								<div style="width:50%;float:left;height:40px;line-height:40px">
+									<p style="float:left">所属标签:</p>
+									
+										<select style="width:100px;height:30px;margin-left:100px" id="select2">
+										  <option value ="volvo">Volvo</option>
+										  <option value ="saab">Saab</option>
+										  <option value="opel">Opel</option>
+										  <option value="audi">Audi</option>
+										</select>
+									
+								</div>
+							</div>
+							<div class="input-box">								
+								<div style="width:50%;float:left;height:40px;line-height:40px">
+									<p style="float:left">所属供应商:</p>
+									
+										<select style="width:100px;height:30px;margin-left:100px" id="select2">
+										  <option value ="volvo">Volvo</option>
+										  <option value ="saab">Saab</option>
+										  <option value="opel">Opel</option>
+										  <option value="audi">Audi</option>
+										</select>
+									
+								</div>
+							</div>	
+							<!-- 添加产品区域 -->
+							<div class="input-box"><span style="color:orange">产品样图区：</span><img id="addimgblock" src="../img/addimg1.jpg" style="float:right"/></div>
+							<!-- 增加模块 -->
+							<div id="imgcontain">
+								<div class="addimgcontain" data-base="1" id="block1">
+									<div class="input-box1" style="margin-top:10px;width:100%">
+										<div class="box-left">颜色类型:</div>
+										<div class="box-right1"><input type="text" name="fenzhu" id="chinaimgList0" placeholder="请输入颜色/类型的中文名称"></div>
+										<div class="box-right1"><input type="text" id="EnglishimgList0" placeholder="请输入颜色/类型的英文名称"></div>
+								    </div>
+		    						 <div class="addstyle" id="show11"><img src="../img/del.jpg" alt="" style="position:absolute;right:0;display:none" id="del11" onclick="del('show11',11)" ><input type="file"  class="filestyle" onchange="setImagePreview('show11','file11')" id="file11" data-num=1 name="11"></div>
+		    						 <input type="hidden" id="groups1" name="groups1">
+								</div>
+							</div>
+							<input type="hidden" name="allgroups" value="">
+							</form>
+							<!-- 增加模块 -->
+							<div class="input-box">
+								<div class="submitbtn"><span>提交</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+		</div>
+		<div class="clear"></div>
+		<!--页脚-->
+		<div id="footer"></div>
+
+		<!--<script type="text/javascript" src="js/ms_common.min.js"></script>-->
+	</body>
+
+</html>
+<!-- <script type="text/javascript" src="../js/jquery.uploadView.js"></script> -->
+<script>
+   var json={
+   		"广东":["汕尾","揭阳","广州","惠州"],
+   		"广西":["汕尾1","揭阳2","广州2","惠州2"]
+
+   };
+   var str="",
+   	   str1="",
+   	   imgpath="",
+   	   allpath="";
+   var reg=/^[-\+]?\d+(\.\d+)?$/;    
+   var reg1=/^[-+]?\d*$/;
+   for(i in json){
+   		str+='<option value ="'+i+'">'+i+'</option>';
+   		if(i=="广东"){
+   			 for(var x=0;x<json[i].length;x++){
+   		        str1+='<option value ="'+json[i][x]+'">'+json[i][x]+'</option>';
+ 			  }
+   		}
+   }
+   $('#select1').html(str);
+   $('#select2').html(str1);
+   //选择照片
+   function select(obj){
+   		var value=obj.value;
+   		var changestr="";
+		 for(var x=0;x<json[value].length;x++){
+	        changestr+='<option value ="'+json[value][x]+'">'+json[value][x]+'</option>';
+		  }
+	   	 $('#select2').html(changestr);	
+   
+   }
+   //上传图片------------------------------------------------------
+   
+	var groupName="groups1,";
+    var arrName={};
+    var n=1,//记录多少图片模块
+    	x=1,//记录第几张照片
+    	filestr="";
+    	
+   //获取文件路径
+   function setImagePreview(showid,choseid) {
+         var docObj=document.getElementById(""+choseid);
+         var imgObjPreview=$("#"+showid);
+                if(docObj.files &&  docObj.files[0]){
+         	       imgObjPreview.css({"background":"url("+ window.URL.createObjectURL(docObj.files[0])+") no-repeat center","background-size":"cover"});	
+         	       //imgObjPreview.style.backgroundSize="cover";
+         	      	n=imgObjPreview.parent().data("base");
+         	     	$("#"+choseid).css("display","none");
+         	      	filestr+=""+n+x+";";
+         	       	// $("#del"+n+x).css("display","block");
+         	       	  x++;
+         	       	  $('#block'+n).find("img").css("display","block");
+         	         var str='<div class="addstyle" id="show'+n+x+'"><img src="../img/del.jpg" alt="" style="position:absolute;right:0;display:none" id="del'+n+x+'" onclick="del(\'show'+n+x+'\',\''+n+x+'\')" ><input type="file" class="filestyle" onchange="setImagePreview(\'show'+n+x+'\',\'file'+n+x+'\')" data-num="'+x+'" id="file'+n+x+'" name="'+n+x+'"></div>';
+         	      	   imgObjPreview.after(str);       
+                }else{
+                        //IE下，使用滤镜
+                        docObj.select();
+                        var imgSrc = document.selection.createRange().text;
+                        var localImagId = document.getElementById("ddd");
+                        //必须设置初始大小
+                        localImagId.style.width = "300px";
+                        localImagId.style.height = "120px";
+                        //图片异常的捕捉，防止用户修改后缀来伪造图片
+						try{
+                                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                                alert(imgSrc);
+                        }catch(e){
+                                alert("您上传的图片格式不正确，请重新选择!");
+                                return false;
+                        }
+                        imgObjPreview.style.display = 'none';
+                        document.selection.empty();
+                }
+                return true;
+    }
+   //删除
+   function del(showid,num,e){
+   	stopBubble(e); 
+    var test = new RegExp(num+";","g");//创建正则表达式对象
+    filestr=filestr.replace(test,"");
+   	$('#'+showid).remove();
+   		
+  }
+	 function stopBubble(e){  
+        // 如果传入了事件对象，那么就是非ie浏览器  
+        if(e&&e.stopPropagation){ 
+            //因此它支持W3C的stopPropagation()方法  
+            e.stopPropagation();  
+        }else{  
+            //否则我们使用ie的方法来取消事件冒泡  
+            window.event.cancelBubble = true;  
+        }  
+    }        
+ 
+   	//添加照片模块
+   $('#addimgblock').click(function(){
+   	n++;
+   	x++;
+   	var  imgstr='<div class="addimgcontain" data-base="'+n+'" id="block'+n+'">'
+		+'	<div class="input-box1" style="margin-top:10px">'
+		+'		<div class="box-left">颜色类型:</div>'
+		+'		<div class="box-right1"><input name="fenzhu" type="text" placeholder="请输入颜色/类型中文名称" id="chinaimgList'+n+'" ></div>'
+		+'		<div class="box-right1"><input type="text" placeholder="请输入颜色/类型英文名称" id="EnglishimgList'+n+'" ></div>'
+	    +'	</div>'
+	   +'<div class="addstyle" id="show'+n+x+'"><img src="../img/del.jpg" alt="" style="position:absolute;right:0;display:none" id="del'+n+x+'" onclick="del(\'show'+n+x+'\',\''+n+x+'\')" ><input type="file" class="filestyle" onchange="setImagePreview(\'show'+n+x+'\',\'file'+n+x+'\')" data-num="'+x+'" id="file'+n+x+'" name="'+n+x+'"></div><input type="hidden" id="groups'+n+'" name="groups'+n+'"></div>';
+	    
+	   $('#imgcontain').append(imgstr);
+	   groupName+="groups"+n+","; 
+   });
+ 
+
+   $('.submitbtn').click(function(){
+	   if(arrName.length!=null && arrName.length!=""){
+   		 arrName=filestr.substring(0,filestr.length-1).split(';');
+	   }else{
+		   arrName.length=0;
+	   }  
+   		uploadimg(arrName.length);
+	  
+
+   });
+ 	
+   //上传方法
+		   function uploadimg(num){
+				alert("num:"+num);
+		   		if(num<=0){		   			
+		   			if(!check()){  				
+		   			
+		   			}else{
+		   				alert("tijiao");
+		   			groupName=groupName.substring(0, groupName.length-1);
+	   				$('[name="allgroups"]').val(groupName);
+		   			var formMap = dwr.util.getValues("Contentform");
+		   			 //提交数据
+					  _ProductAdminBODwr_js.doSaveProduct(formMap, function(data){
+					  	if(data){
+					  		 alert("上传成功");
+					  	}else{
+					  		alert("上传失败");
+					  	}
+						 
+					  });
+		   			 }
+		   		}else{
+		   			var list=arrName[num-1];
+		   			
+		   			var blocknum=list.substr(0, 1);
+		   			var fenlei=$("#chinaimgList"+blocknum).val();
+		   			var fenlei_en=$("#EnglishimgList"+blocknum).val();
+		   			var inputstr=$("#groups"+blocknum).val(fenlei+";"+fenlei_en+";");
+		   			//$("#groups"+blocknum).val(inputstr);
+		   			//$(input[name=])		   			
+		   			if(list!=null&&list!=""){
+		   			var file = dwr.util.getValue(list);
+		   			_ProductAdminBODwr_js.doUploadProductImg(file,file.value,function(data) {
+						if (data!=null) {
+							     alert(data);
+								var inputstr=$("#groups"+blocknum).val();
+		   						$("#groups"+blocknum).val(inputstr+data+";");
+		   						uploadimg(num-1);
+						} else {
+							alert('发送失败，请重新发送');
+						}
+				    });
+		   			}
+		   		}
+		   }
+ 
+function check(){
+	
+	if($('[name="product_name_en"]').val()==""||$('[name="product_name_en"]').val()==null){
+		alert("产品名（英文）不能为空！");
+		return false;
+	}else if($('[name="product_name"]').val()==""||$('[name="product_name"]').val()==null){
+		alert("产品名不能为空");
+		return false;
+	}else if($('[name="product_code"]').val()==""||$('[name="product_code"]').val()==null){
+		alert("编号不能为空");
+		return false;
+	}else if($('[name="big_price"]').val()==""||$('[name="big_price"]').val()==null){
+		alert("大众指导价不能为空");
+		return false;
+	}else if($('[name="example_price"]').val()==""||$('[name="example_price"]').val()==null){
+		alert("样品价不能为空");
+		return false;
+	}else if($('[name="product_intro"]').val()==""||$('[name="product_intro"]').val()==null){
+		alert("产品描述不能为空");
+		return false;
+	}else if($('[name="product_intro_en"]').val()==""||$('[name="product_intro_en"]').val()==null){
+		alert("产品描述（英文）不能为空");
+		return false;
+	}else if($('[name="fenzhu"]').val()==""||$('[name="fenzhu"]').val()==null){
+		alert("分组名不能为空");
+		return false;
+	}else if(!reg.test($('[name="big_price"]').val())&&!reg1.test($('[name="big_price"]').val())){
+		alert("大众指导价格式错误");
+		return false;
+	}else if(reg.test($('[name="example_price"]').val())&&!reg1.test($('[name="example_price"]').val())){
+		alert("样品价格式错误");
+		return false;
+	}else if(reg1.test($('[name="product_code"]').val())){
+		alert("编号格式错误");
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>

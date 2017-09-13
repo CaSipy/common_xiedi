@@ -1,0 +1,358 @@
+html,body,div,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,input,p,legend,img,th,td,blockquote,a{
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+	font-size: 12px;
+	}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+em,strong,b,u,i{
+	font-style: normal;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	font-weight: normal;
+}
+button,input,textarea,select{
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	*font-size: 100%;
+	outline: 0;
+}
+textarea {
+	resize: none;
+}
+
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+a:hover{
+	text-decoration: none;
+}
+/*--------------------------------------*/
+.gl_zong{
+	display: table;
+	padding: 0% 2%;
+	width: 96%;
+}
+.gl_header{
+	width: 100%;
+	height: 150px;
+	display: table;
+}
+.glh_left{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.glh_left img{
+	width: auto;
+	height: 150px;
+}
+.glh_right{
+	width: 45%;
+	height: 23px;
+	float: left;
+	text-align: right;
+	padding-right: 5%;
+	padding-top: 130px;
+}
+.gl_you{
+	width: auto;
+	height: auto;
+}
+.gl_you img{
+	width: 11px;
+}
+.gl_kehu{
+	width: auto;
+	font-size: 15px;
+	font-weight: 200;
+	color: #515151;
+}
+.glh_right b{
+	color: red;
+}
+hr{
+	margin: 0px;
+	margin-bottom: 30px;
+	border: 1px solid dimgrey;
+}
+.gl_content{
+	width: 100%;
+	height: auto;
+	display: table;
+	background: #F5F5F5;
+}
+.glc_top{
+	width: 100%;
+	height: auto;
+}
+h1{
+	background: #E5E5E5;
+	font-weight: 600;
+	font-size: 18px;
+	width: 99%;
+	font-family: "黑体";
+	height: 40px;
+	line-height: 40px;
+	padding-left: 1%;
+}
+.menber_style{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin: 1% 0%;
+}
+.menber_style span{
+	width: 46.5%;
+	height: 50px;
+	display: block;
+	float: left;
+	border: 1px solid #E5E5E5;
+	padding-left: 2%;
+	font-size: 14px;
+	border-radius: 10px;
+}
+.menber_style span i{
+	color: red;
+	font-size: 18px;
+}
+.glc_con{
+	width: 100%;
+	height: auto;
+	display: table;
+}
+.gl_search{
+	width: 100%;
+	height: 30px;
+	background: #E9E9E9;
+}
+.gl_shuru{
+	width: 84.5%;
+	height: auto;
+	padding-left: 1.5%;
+	float: left;
+}
+.gl_shuru ul{
+	width: 100%;
+	height: 30px;
+	display: table;
+	line-height: 30px;
+}
+.gl_shuru ul li{
+	float: left;
+	width: 30%;
+}
+.gl_shuru ul li span{
+	font-size: 13px;
+	margin-right: 1%;
+}
+.gl_shuru ul li input{
+	height: 26px;
+	width: 70%;
+	padding-left: 1%;
+}
+.gl_sousuo{
+	float: right;
+	margin-right: 2%;
+	width: 12%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	background: linear-gradient(#F9F9F9,#ECECEC);
+	font-size: 15px;
+}
+.gl_t{
+	margin-top: 2%;
+	width: 100%;
+}
+.gl_t table{
+	width: 100%;
+	text-align: center;
+}
+thead tr{
+	height: 40px;
+	background: #C3C3C3;
+}
+tbody tr{
+	border: 0;
+	border-bottom: 1px solid grey;
+	height: 30px;
+}
+.gl_checkb{
+	height: 15px;
+	width: 15px;
+	margin-top: 5px;
+}
+.gl_caozuo{
+	width: 70px;
+	border: 0px;
+	border-radius: 5px;
+	background: #169BD5;
+	color: white;
+	height: 20px;
+}
+.gl_cz_red{
+	background: red;
+}
+.gl_cz_active{
+	display: none !important;
+}
+.all_search{
+	width: 98%;
+	margin-top: 2%;
+	background: #E9E9E9;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 2%;
+}
+.all_search span,.all_search a{
+	display: block;
+	float: left;
+}
+.all_check{
+	margin-top: 5px;
+	width: 15px;
+	height: 15px;
+	vertical-align:text-bottom; 
+	margin-bottom:0px;
+}
+.as_grade{
+	width: 16%;
+	height: 30px;
+	line-height: 30px;
+	background: #169BD5;
+	margin-left: 5%;
+	margin-top: 5px;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	border-radius: 5px;
+}
+/*-------------------------------------*/
+/*遮蔽层*/
+.zhebi{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 500px;
+	background: rgba(0,0,0,0.4);
+	display: block;
+}
+.pouWin{
+	border: 3px solid #777777;
+	width: 35%;
+	height: 250px;
+	position: relative;
+	top: 200px;
+	left: 32%;
+	background: white;
+	z-index: 1;
+}
+.gl_close{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	background: white;
+	text-align: center;
+	padding-top: 10px;
+}
+
+h2{
+	color: #777777;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 2%;
+	z-index: 2;
+	margin-top: 1%;
+}
+.qr_Zero{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 40px;
+	padding-top: 50px;
+}
+.gl_xgnr{
+	width: 65%;
+	height: 120px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 40px;
+	padding-top: 30px;
+	padding-left: 35%;
+}
+.pouWin_p{
+	width: 100%;
+	height: 50px;
+}
+.gl_qx{
+	border: 1px solid #777777;
+	font-size: 16px;
+	width: 35%;
+	height: 50px;
+	margin: 0% 5% 0% 10%;
+	border-radius: 8px;
+	background: white;
+}
+.gl_qd{
+	border: 0px;
+	font-size: 16px;
+	width: 40%;
+	height: 50px;
+	background: #169BD5;
+	color: white;
+	border-radius: 8px;
+}
+.glx_p{
+	width: 100% !important;
+	height: 30px !important;
+	line-height: 30px;
+	font-weight: 100 !important;
+	text-align: left;
+}
+.gl_rad{
+	width: 18px;
+	height: 18px;
+	vertical-align: text-bottom;
+	margin-bottom: 0px;
+	margin-right: 2%;
+}
+.gl_xgnr span{
+	font-size: 18px;
+}
+.gl_active{
+	color: #FF9913 !important;
+}
+/*限制字数*/
+.size_astrict{
+	max-width:50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	course:hand;
+	padding: 0% 5px;
+}
+/*让a操作分开*/
+.a_leave{
+	margin-right: 10px;
+}
+/*限制操作框的大小*/
+.operation{
+	min-width: 60px;
+	padding: 0% 5px;
+}
+td a{
+	color: #3D3DEE;
+}

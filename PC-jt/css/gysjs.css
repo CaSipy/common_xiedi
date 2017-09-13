@@ -1,0 +1,34 @@
+.gysjs_p{
+	width: 62%;
+	height: auto;
+	margin-left: 38%;
+	font-size: 16px;
+}
+.gysjs_jj{
+	font-size: 14px !important;
+	margin-left: 15% !important;
+	margin-right: 15% !important;
+	width: 70% !important;
+	line-height: 22px;
+}
+.gwc_top{
+	width: 96%;
+	height: 30px;
+	margin: 1% 2%;
+}
+.gwc_top ul{
+	width: 100%;
+	display: table;
+}
+.gwc_top ul li{
+	width: 6%;
+	float: left;
+}
+.gwc_top ul span{
+	float: left;
+	font-size: 14px;
+	+float: none !important;
+}
+.gwc_top ul a{
+	font-size: 14px;
+}

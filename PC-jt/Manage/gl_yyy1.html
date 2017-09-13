@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gl_vip.css"/>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<div class="gl_zong">
+			<div id="gl_all_header"></div>
+			<div class="gl_content">
+				<div class="glc_top">
+					<h1>营业员管理</h1>
+					<div class="menber_style">
+						<span style="margin-right: 2.68%;">营业员总人数：<i>312</i>人</span>
+						<span>本月新增营业员总人数：<i>32</i>人</span>
+					</div>
+				</div>
+				<div class="glc_con">
+					<div class="gl_search">
+						<div class="gl_shuru">
+							<ul>
+								<li>
+									<span>营业员编号</span>
+									<input type="text" name="gl_num" id="gl_num" value="" />
+								</li>
+								<li>
+									<span>营业员用户名</span>
+									<input type="text" name="gl_uname" id="gl_uname" value="" />
+								</li>
+								<li>
+									<span>营业员姓名</span>
+									<input type="text" name="gl_company" id="gl_company" value="" />
+								</li>
+							</ul>
+						</div>
+						<input type="button" name="gl_sousuo" id="gl_sousuo" value="搜索" class="gl_sousuo" />
+					</div>
+				
+				<div class="gl_t">
+					<table border="1px solid black" cellspacing="" cellpadding="">
+						<thead>
+							<tr>
+								<td>选项</td>
+								<td>个人信息</td>
+								<td>营销网络</td>
+								<td>客服工单查看</td>
+								<td>营销级别</td>
+								<td>客服工单</td>
+								<td>加盟审核</td>
+								<td>成交额</td>
+								<td>奖金明细</td>
+								<td>提现管理</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" class="gl_checkb" name="gl_checkb" id="gl_checkb" value="" />
+								</td>
+								<td>个人信息</td>
+								<td>
+									<a href="javascript">点击查看</a>
+								</td>
+								<td>
+									<a href="javascript">
+										点击查看</a>
+								</td>
+								<td>7</td>
+								<td>
+									<a href="javascript">点击查看</a>
+								</td>
+								<td>
+									<a href="javascript">点击查看</a>
+								</td>
+								<td>888.88</td>
+								<td>
+									<a href="javascript">点击查看</a>
+								</td>
+								<td style="width: 150px;">
+									<input type="button" name="gl_gl" id="gl_gl" value="管理" class="gl_caozuo" />
+								</td>
+								<td style="width: 200px;">
+									<input type="button" name="gl_xg" id="gl_xg1" value="修改" class="gl_caozuo" />
+									<input type="button" name="gl_suoding" id="gl_suo1" value="锁定" class="gl_caozuo " />
+									<input type="button" name="gl_jiesuo" id="gl_jsuo1" value="解锁" class="gl_caozuo gl_cz_red gl_cz_active" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+
+</html>
+<script type="text/javascript">
+	gl();
+	$('.zhebi').height($(document).height());
+//	弹窗
+		//取消
+		$('.gl_qx').click(function(){
+			$('.zhebi').addClass('gl_cz_active');
+		});
+		//关闭X
+		$('.gl_close').click(function(){
+			$('.zhebi').addClass('gl_cz_active');
+		});
+		//批量选择
+		$('#beZero').click(function(){
+			$('.zhebi').removeClass('gl_cz_active');
+			$('#qr_Zero').removeClass('gl_cz_active');
+			$('#pl_select').addClass('gl_cz_active');
+		});
+		$('#vip_dj').click(function(){
+			$('.zhebi').removeClass('gl_cz_active');
+			$('#pl_select').removeClass('gl_cz_active');
+			$('#qr_Zero').addClass('gl_cz_active');
+		});
+		//全选
+		$('#all_check').click(function(){
+			if($('#all_check').is(':checked')){
+				$("input[type='checkbox']").attr("checked","true"); 
+			}
+			else{
+				$("input[type='checkbox']").removeAttr("checked"); 
+			}
+		});
+		
+		
+</script>

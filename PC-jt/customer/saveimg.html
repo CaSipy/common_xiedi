@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.mytab {
+				border: 1px solid gray;
+				cellspacing: 0;
+				cellpadding: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			 function save(){  
+                var img = document.getElementById("testImg");  
+                var oPop = window.open(img.src,"","width=1,height=1,top=5000,left=5000");  
+                for(;   oPop.document.readyState   !=   "complete";   ){       
+                    if   (oPop.document.readyState   ==   "complete")break;    
+                }  
+                oPop.document.execCommand("SaveAs");  
+                oPop.close();  
+            }  
+		</script>
+	</head>
+
+	<body>
+		<input type="button" name="" id="" value="保存" onclick="save()" />
+		<img src="img/0232bad1d5834a4480e66e87373edb0d.png" id="testImg" width="200px" height="200px" alt="测试图片js保存"/>  
+	</body>
+
+</html>

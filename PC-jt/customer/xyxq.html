@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>鞋样详情</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/shaixuan.css" />
+<link rel="stylesheet" type="text/css" href="../css/css.css" />
+<link rel="stylesheet" type="text/css" href="../css/gw.css" />
+
+<!--<script src="js/.js"></script>-->
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<script src="../js/all.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/gw.js" type="text/javascript" charset="utf-8"></script>
+<!--导入DWR引擎  -->
+<script type="text/javascript" src="../../dwr/engine.js"></script>
+<script type="text/javascript" src="../../dwr/util.js"></script>
+<script type="text/javascript" src="../../dwr/interface/_UserBO_js.js"></script>
+<script type="text/javascript" src="../../dwr/interface/_ProductBO_js.js"></script>
+</head>
+
+<body>
+	<div id="zong" class="zong zong_qx" name="zong">
+		<div id="top"></div>
+		<div id="gw_content" class="content tfooter_bg tfooter_ta">
+			<div id="gwc_top" class="gwc_top">
+				<ul>
+					<li><a href="pc_index.html">优底商城</a></li>
+					<span>></span>
+					<li><a href="erji.html">鞋底库</a></li>
+					<span>></span>
+					<li><a href="gw.html">商品详情</a></li>
+				</ul>
+			</div>
+			<div id="gw_content_left" class="gw_content_left">
+				<!--轮播-->
+				<div id="gw_content_sp" class="gw_content_sp">
+					<div id="content_lb" class="content_lb" name="content_lb">
+						<div id="idiv" class="play">
+							<div class="small_pic">
+								<ul style="width:390px">
+									<li style="filter:100; opacity:1;"><img
+										src="../img/16.9.3/5J221(1).jpg">
+									</li>
+									<li><img src="../img/16.9.3/5J221 (5).jpg">
+									</li>
+									<li><img src="../img/16.9.3/5J221 (7).jpg">
+									</li>
+									<li><img src="../img/16.9.3/5J230鞋 (2).jpg">
+									</li>
+									<li><img src="../img/16.9.19/3G538 (4)(1).JPG">
+									</li>
+									<li><img src="../img/16.9.22/5J380鞋 (3).jpg">
+									</li>
+								</ul>
+							</div>
+							<ul class="big_pic">
+								<div class="prev"></div>
+								<div class="next"></div>
+
+								<a class="mark_left" href="javascript:;"></a>
+								<a class="mark_right" href="javascript:;"></a>
+
+								<li style="filter:100; opacity:1;"><img
+									src="../img/16.9.3/5J221鞋 (1).jpg">
+								</li>
+								<li><img src="../img/16.9.3/5J221鞋 (5).jpg">
+								</li>
+								<li><img src="../img/16.9.3/5J221鞋 (7).jpg">
+								</li>
+								<li><img src="../img/16.9.3/5J230鞋 (2).jpg">
+								</li>
+								<li><img src="../img/16.9.19/3G538 (4)(1).JPG">
+								</li>
+								<li><img src="../img/16.9.22/5J380鞋 (3).jpg">
+								</li>
+							</ul>
+
+						</div>
+					</div>
+					<!--介绍-->
+					<div id="content_js" class="content_js">
+						<h1 class="gw_h1" id="pname"></h1>
+						<div id="gw_cp" class="gw_cp">
+							<p class="gw_p">大货指导价：<span class="gw_jg" name="gw_jq" id="dahuo"></span></p>
+							<p class="gw_p">样品价：<span class="gw_jg" name="gw_jq" id="yangpin"></span></p>
+							<p class="gw_txtalr">产品编号：<span id="bianhao"></span></p>
+						</div>
+
+						<div id="gw_bq" class="gw_bq">
+							<h2 class="gw_h2">商品标签</h2>
+							<p class="gw_p gw_ptop" id="biaoqian"></p>
+						</div>
+
+						<div id="gw_bq" class="gw_bq gw_bq_ys">
+							<h2 class="gw_h2">商品颜色/材质</h2>
+							<p class="gw_p gw_ptop" id="gw_p">
+								<i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/6R529鞋 (10).jpg" />
+								</i> <i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/5J156鞋 (25).jpg" />
+								</i> <i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/5J156鞋 (31).jpg" />
+								</i> <i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/5J156鞋 (37).jpg" />
+								</i> <i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/5J230楦 (1).jpg" />
+								</i> <i href="#"><img class="gw_ptop_img"
+									src="../img/16.9.3/6R529鞋 (10).jpg" />
+								</i>
+							</p>
+							<p class="gw_p gw_ptop gw_p_top">
+								<span class="tagname"></span>
+							</p>
+						</div>
+
+						<!--<div id="gw_bq" class="gw_bq gw_bq_ys" style="height: 80px !important;">
+								<h2 class="gw_h2">尺码表</h2>
+								<p class="gw_p gw_ptop" id="t-number">
+									 <i href="#" class="gw_size">35</i>
+									<i href="#" class="gw_size">36</i>
+									<i href="#" class="gw_size">37</i>
+									<i href="#" class="gw_size">38</i>
+									<i href="#" class="gw_size">39</i>
+									<i href="#" class="gw_size">40</i> 
+								</p>
+							</div>-->
+
+						<div id="gw_bq" class="gw_bq">
+							<h2 class="gw_h2">查阅权限：</h2>
+							<li class="gw_p gw_ptop" id="quanxian">免费会员、VIP会员、SVIP会员、指定会员</li>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+			<div id="gw_content_right" class="gw_content_right">
+				<div id="gwr_top" class="gwr_p">供应商</div>
+				<div id="gw_gys" class="gw_gys">
+					<img class="gw_gys_img" src="../img/logo.png" alt="" />
+					<p class="gw_gys_name">广大志达行新材料有限公司</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="gw_cpxq" class="gw_cpxq gw_content_left">
+			<!--商品图-->
+			<h3 class="gw_h3">商品详情</h3>
+			<div class="gw_sp">
+				<img style="width: 100%; height: 100%;"
+					src="../img/16.9.6/5J206 (6).jpg" />
+
+			</div>
+			<div class="gw_sp_js">
+				<h3 class="gw_h3 gw_txt_left gw_h3_mb">轻盈稳定,流畅过度</h3>
+				<p class="gw_pt gw_txt_left">防滑稳定</p>
+				<h2 class="gw_h2 gw_txt_left gw_txt_fw">稳定升级</h2>
+				<p class="gw_pt gw_txt_left">专注鞋底，品质值得信赖</p>
+				<h2 class="gw_h2 gw_txt_left gw_txt_fw">稳固锁定</h2>
+				<p class="gw_pt gw_txt_left">采用ERP技术，再生材料</p>
+			</div>
+		</div>
+		<div id="footer" class="footer gw_footer" name="footer">
+			<div id="footer-left" class="footer-left" name="footer-left">
+				<img class="footer_img" src="../img/sclogo.png" />
+				<div id="wbbq" class="wbbq" name="wbbq">
+					<p class="footer_p">WWW.YOURDI.COM.CN 版权所有 2016</p>
+					<p class="footer_p">ICP证：粤*******</p>
+				</div>
+			</div>
+			<div id="footer-right" class="footer-right" name="footer-right">
+				<div>
+					<h2>帮助中心</h2>
+					<h3>积分兑换说明</h3>
+					<h3>积分细则</h3>
+					<h3>查看已购商</h3>
+					<h3>我要买</h3>
+					<h3>忘记密码</h3>
+				</div>
+				<div>
+					<h2>支付方式</h2>
+					<h3>公司转账</h3>
+					<h3>邮局汇款</h3>
+					<h3>分期付款</h3>
+					<h3>在线支付</h3>
+					<h3>如何注册支付</h3>
+				</div>
+				<div>
+					<h2>售后服务</h2>
+					<h3>退款申请</h3>
+					<h3>返修/退换货</h3>
+					<h3>退换货流程</h3>
+					<h3>退换货政策</h3>
+					<h3>联系卖家</h3>
+				</div>
+				<div>
+					<h2>客服中心</h2>
+					<h3>添加或者、修改</h3>
+					<h3>商品发布</h3>
+					<h3>会员修改个人</h3>
+				</div>
+				<div>
+					<h2>关于我们</h2>
+					<h3>合作及洽谈</h3>
+					<h3>招聘英才</h3>
+					<h3>联系我们</h3>
+					<h3>关于好货无忧</h3>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	com();
+	$("#gw_btn")
+			.click(
+					function() {
+						var number = $("#number").html();
+						location.href = "http://erp.yourdi.com.cn/order/product_search_result.do?search_string="
+								+ number;
+					});
+	//获取商品标签
+	$(function() {
+		var g_id =4;
+		_ProductBO_js.listShoeTagsById(g_id,function(data) {
+			for(var i = 0;i<data.length;i++){
+				var str = data[i].tag_name;
+				$("#biaoqian").append(str);
+			}
+		});
+	});
+	//获取大货价格等数据
+	$(function(){
+		var p_id = 'y0iuknebm0';
+		_ProductBO_js.getProductBasicInfo(p_id,function(data){
+			$('#dahuo').html(data.p_price);//大货指导价
+			$('#yangpin').html(data.p_price1);//样品价
+			$('#bianhao').html(data.p_code);//产品编号
+			$('#pname').html(data.p_name);//商品名称
+			$('.tagname').html(data.p_biaoqian);//产品标签
+		});
+	});
+</script>
+
+</html>

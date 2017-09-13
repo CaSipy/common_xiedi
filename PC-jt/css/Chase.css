@@ -1,0 +1,187 @@
+progress {
+	width: 300px;
+	border: 1px solid #ffffff;
+	background-color: #e6e6e6;
+	color: #0064B4;
+	/*IE10*/
+}
+
+progress::-moz-progress-bar {
+	background: #FFFFFF;
+}
+
+progress::-webkit-progress-bar {
+	background: #ccc;
+}
+
+progress::-webkit-progress-value {
+	background: #FF7700;
+}
+
+a {
+	color: #000000;
+}
+
+.sui-table th,
+.sui-table td {
+	padding: 16px 8px;
+	line-height: 18px;
+	text-align: center;
+	vertical-align: middle;
+	border-top: 1px solid #e6e6e6;
+}
+
+.sui-nav.nav-tabs> .active> a {
+	font-weight: bold;
+	border: 1px #fff solid;
+	background-color: #fff;
+	border-bottom-color: transparent;
+	cursor: default;
+	font-weight: bold;
+	color: #F2873B;
+}
+
+.sui-nav.nav-tabs> li> a {
+	color: #333333;
+	line-height: 18px;
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+	border: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+	height: 30px;
+	width: 110px;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.sui-nav.nav-tabs {
+	border-bottom: 1px solid #CECECE;
+	padding-left: 5px;
+}
+
+.sui-nav.nav-tabs> .active> a:hover {
+	font-weight: bold;
+	cursor: default;
+	font-weight: bold;
+	color: #F37B1D;
+}
+
+.sui-nav.nav-tabs> li {
+	margin-bottom: -1px;
+	background-color: #fff;
+	border-bottom: 1px #ccc solid;
+}
+
+.sui-nav.nav-tabs> .active {
+	border-bottom: 0;
+}
+
+.sui-nav.nav-tabs> li+ li {
+	margin-left: -3px;
+}
+
+.yuan {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #64bdc5;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 50px;
+}
+/*会员*/
+.hide{display:none !important;}
+/*购物车*/
+.ng-footer {
+	height: 514px;
+	margin-top: 0;
+}
+
+.ng-s-footer {
+	height: 130px;
+	background: none;
+	text-align: center;
+}
+
+.ng-s-footer p.ng-url-list {
+	height: 25px;
+	line-height: 25px;
+}
+
+.ng-s-footer p.ng-url-list a {
+	color: #666666;
+}
+
+.ng-s-footer p.ng-url-list a:hover {
+	color: #f60;
+}
+
+.ng-s-footer .ng-authentication {
+	float: none;
+	margin: 0 auto;
+	height: 25px;
+	width: 990px;
+	margin-top: 5px;
+}
+
+.ng-s-footer p.ng-copyright {
+	float: none;
+	width: 100%;
+}
+
+.root1200 .ng-s-footer p.ng-copyright {
+	width: 100%;
+}
+
+
+/*聊天框样式*/
+
+.send {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	height: auto;
+	max-width: 80%;
+	padding: 0.5em;
+	border-radius: .5em;
+	/* 圆角 */
+	font-size: 1.2em;
+	overflow: hidden
+}
+
+.my {
+	background: #9FE756;
+	margin-bottom: 20px;
+}
+
+.other {
+	background: #9A9A9A;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.active {
+	border-bottom: 1px solid white !important;
+}
+
+#form ul,
+#allform ul {
+	margin-left: 0;
+	margin-top: 10px;
+}
+
+

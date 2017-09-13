@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/gl_vip.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gl_lsgd.css" />
+		<link rel="stylesheet" type="text/css" href="../css/fenye.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gl_lsgd_show.css"/>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--导入DWR引擎  -->
+		<script type="text/javascript" src="../../dwr/engine.js"></script>
+		<script type="text/javascript" src="../../dwr/util.js"></script>
+		<script type="text/javascript" src="../../dwr/interface/_CustomerBODwr_js.js"></script>	
+	</head>
+
+	<body>
+		<div class="gl_zong">
+			<div id="gl_all_header"></div>
+
+			<div class="gl_content">
+				<div id="glc_all_left"></div>
+				<div class="glc_right">
+					<div class="gl_adss">
+						<p>您的位置：</p>
+						<ul>
+							<li>工单处理中心</li>
+							<li>></li>
+							<li>公共工单</li>
+							<li>></li>
+							<li>历史工单列表</li>
+							<li>></li>
+							<li>历史工单查看</li>
+						</ul>
+					</div>
+					<div class="gl_table">
+						<div class="gl_ltjl">
+							<hr class="gl_hr" />
+							<div class="gl_gdxq">
+								<ul>
+									<li>工单编号:<b id='gl_id'>00001</b></li>
+									<li>创建时间：<b id='gl_time'>2016-09-05</b></li>
+									<li>处理状态：<b id='gl_state'>已处理</b></li>
+								</ul>
+							</div>
+							<div class="gl_gdnr" id=gl_gdnr>
+								<div class="gl_gdxx">
+									<div class="name_time">
+										<span>李老板</span>
+										<span>11:44:49</span>
+									</div>
+									<div class="chat_con">
+										<span>帮我看下有没有这个鞋底的鞋款啊</span>
+										<img src="" alt="" />
+									</div>
+								</div>
+								
+								<div class="gl_gdxx">
+									<div class="name_time">
+										<span>李老板</span>
+										<span>11:44:49</span>
+									</div>
+									<div class="chat_con">
+										<span>帮我看下有没有这个鞋底的鞋款啊</span>
+										<img src="" alt="" />
+									</div>
+								</div>
+								
+								<div class="gl_gdxx">
+									<div class="name_time">
+										<span>李老板</span>
+										<span>11:44:49</span>
+									</div>
+									<div class="chat_con">
+										<span>帮我看下有没有这个鞋底的鞋款啊</span>
+										<img src="" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="tcdPageCode" style="text-align: left; margin-left: 30%; margin-top: 5% !important;"></div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
+<script type="text/javascript" src="js/safe/ms_common.min.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.page.js"></script>
+
+<script type="text/javascript">
+	gl();
+	var n = 9;
+	$(".tcdPageCode").createPage({
+		pageCount: n,
+		current: 1,
+		backFn: function(p) {
+			$('#ye').html(p);
+		}
+	});
+		var uid=00001;
+	 _CustomerBODwr_js.getGongdanById(uid,function(data){
+		var str='';
+		/* var url=location.href;
+		
+		var reg =/([^\=\?|\&]+)\)/g;
+		
+		var aa =url.match(reg); */
+		
+		console.log(data);
+		$('#gl_id').html(data.o_id);
+		
+		$('#gl_time').html(data.createtime);
+		
+		$('#gl_state').html(data.o_state); 
+		
+		
+	 });
+	 var qid='sasuejs';
+	 _CustomerBODwr_js.getDealedOrderById(qid,function(data1){
+		var str1='';
+		console.log(data1);
+		for(var i=0;i<data1.length;i++){
+			str1+='<div class="gl_gdxx">'
+				+'	<div class="name_time">'
+				+'		<span>'+data1[i].name+'</span>'
+				+'		<span>'+data1[i].deal_time+'</span>'
+				+'	</div>'
+				+'	<div class="chat_con">'
+				+'		<span>'+data1[i].content+'</span>'
+				+'		<img src="../img/'+data1[i].img+'" alt="" />'
+				+'	</div>'
+				+'	</div>';
+		}
+		 $('#gl_gdnr').html(str1);
+	 });
+</script>

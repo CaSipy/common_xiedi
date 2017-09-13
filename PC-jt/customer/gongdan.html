@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gd.css" />
+		<link rel="stylesheet" type="text/css" href="../css/sui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shaixuan.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/safe/ms-style.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/css.css" />
+		<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/kuangjia.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/gongdan.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--导入DWR引擎  -->
+		<script type="text/javascript" src="../../dwr/engine.js"></script>
+		<script type="text/javascript" src="../../dwr/util.js"></script>
+		<script type="text/javascript" src="../../dwr/interface/_WdBODwr_js.js"></script>		
+	</head>
+
+	<body>
+		<div class="zong">
+			<div id="top"></div>
+			<div id="header"></div>
+			<div id="gd_content" class="gd_content">
+				<div class="gdc_left">
+					<h1 class="gd_h1">热门</h1>
+					<div class="gdl_zong" id="hotshow">
+						
+						<div class="gdl_kuai">
+							<img src="" alt="" />
+							<span>冬鞋 春鞋 2017</span>
+						</div>
+						<div class="gdl_kuai">
+							<img src="" alt="" />
+							<span>冬鞋 春鞋 2017</span>
+						</div>
+					</div>
+				</div>
+				<div class="gdc_right">
+					<div class="gdr-top" id="gdr_top">
+						<h1 class="gd_h1">我的工单</h1>
+						<ul class="gd_ul">
+							<li data-ren = "kehu"><a href="javascript:;">客户</a></li>
+							<li style="width: 4%;">/</li>
+							<li data-ren = "yewuyuan"><a href="javascript:;">业务员</a></li>
+						</ul>
+					</div>
+					<div id="gd_sf">
+						<!--客户-->
+						<div id="kehu" class="kehu">
+							<div id="mes_dh" class="gdr_title">
+								<ul>
+									<li data-base='gd_tj' id='gdt_tj'>
+										<span>工单提交</span>
+									</li>
+									<li data-base='gd_gk' class="mes_active" id='gdt_gk'>
+										<span>寻款工单概况</span>
+									</li>
+									<li data-base='gd_wcl' class="mes_active" id='gdt_wcl'>
+										<span>未处理工单</span>
+										<i>(0)</i>
+									</li>
+									<li data-base='gd_clz' class="mes_active" id='gdt_clz'>
+										<span>处理中工单</span>
+										<i>(2)</i>
+									</li>
+									<li data-base='gd_ycl' class="mes_active" id='gdt_ycl'>
+										<span>已处理工单</span>
+										<i>(11)</i>
+									</li>
+									<li data-base='gd_ygb' class="mes_active" id='gdt_ygb'>
+										<span>已关闭工单</span>
+										<i>(11)</i>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<div class="gd_sc" id="gd_tj">
+									<div class="control-group js_uploadBox js_div gd_div">
+										<div class="btn-upload gd_up">
+											<input type='hidden' value='' id="img_url" />
+											<input class="js_upFile gd_jsup" capture="camera" type="file" id="sendImg" name="cover" onchange="submit_sendImg()">
+											<a href="javascript:;" class="gd_sc_a">上传图片</a>
+										</div>
+										<div class="js_showBox " style="text-align:center;width: 100%;">
+											<img class="js_logoBox" src="img/icon.png">
+										</div>
+									</div>
+									<div class="gd_bc">
+										<span>说明：</span>
+										<textarea name="buchong" rows="5" cols="50" id="form"></textarea>
+										<input type="button" name="gd_tj" id="gd_tj" value="提交工单" class="dg_tj" onclick="text()" />
+									</div>
+								</div>
+								<div class="gd_wcl gd_hide" id="gd_gk">
+								<table cellpadding="0" cellspacing="0" id='gdz_table'>
+									<thead>
+									<tr class="tr">
+										<td class="td1">寻款工单概况</td>
+										<td style="background:#D9D9D9; border-left:0px;"></td>
+										<td style="background:#D9D9D9; border-left:0px;"></td>
+										<td style="background:#D9D9D9; border-left:0px;"></td>
+										<td style="background:#D9D9D9; border-left:0px;"></td>
+										<td class="a_more">
+											<a href="javascript:;">更多工单》</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="tr">编号</td>
+										<td class="tr">业务员</td>
+										<td class="tr">图片</td>
+										<td class="tr">留言</td>
+										<td class="tr">发布时间</td>
+										<td class="tr">处理状态</td>
+									</tr>
+									</thead>
+									<tbody id='gdt_con'>
+									<tr>
+										<td>10001</td>
+										<td>lengy</td>
+										<td><img src="winxin.jpg" alt=""></td>
+										<td>
+											<p>我在寻找这款鞋底的供应商，鞋码大大大地方发的说法 发斯蒂芬大阿斯顿发发放阿萨德发电饭锅</p>
+										</td>
+										<td>2015/03/31/09:33:33</td>
+										<td>处理成功</td>
+									</tr>
+									<tr>
+										<td>10001</td>
+										<td>lengy</td>
+										<td><img src="winxin.jpg" alt=""></td>
+										<td>
+											<p>我在寻找这款鞋底的供应商，鞋码大大大地方发的说法 发斯蒂芬大阿斯顿发发放阿萨德发电饭锅</p>
+										</td>
+										<td>2015/03/31/09:33:33</td>
+										<td>处理成功</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+						</div>
+						<!--业务员-->
+						<div id="yewuyuan" class="yewuyuan gd_hide">
+							<div id="mes_ydh" class="gdr_title">
+								<ul>
+									<li data-ybase='gd_ygk' class="" id='gdt_ygk'>
+										<span>寻款工单概况</span>
+									</li>
+									<li data-ybase='gd_ywcl' class="mes_active" id='gdt_ywcl'>
+										<span>未处理工单</span>
+										<i>(0)</i>
+									</li>
+									<li data-ybase='gd_yclz' class="mes_active" id='gdt_yclz'>
+										<span>处理中工单</span>
+										<i>(2)</i>
+									</li>
+									<li data-ybase='gd_yycl' class="mes_active" id='gdt_yycl'>
+										<span>已处理工单</span>
+										<i>(11)</i>
+									</li>
+									<li data-ybase='gd_yygb' class="mes_active" id='gdt_yygb'>
+										<span>已关闭工单</span>
+										<i>(11)</i>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<div class="gd_wcl" id="gd_ygk">
+									<table cellpadding="0" cellspacing="0" id='gdz_ytable'>
+										<thead>
+										<tr class="tr">
+											<td class="td1">寻款工单概况</td>
+											<td style="background:#D9D9D9; border-left:0px;"></td>
+											<td style="background:#D9D9D9; border-left:0px;"></td>
+											<td style="background:#D9D9D9; border-left:0px;"></td>
+											<td style="background:#D9D9D9; border-left:0px;"></td>
+											<td class="a_more">
+												<a href="javascript:;">更多工单》</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="tr">编号</td>
+											<td class="tr">客户</td>
+											<td class="tr">图片</td>
+											<td class="tr">留言</td>
+											<td class="tr">发布时间</td>
+											<td class="tr">处理状态</td>
+										</tr>
+										</thead>
+										<tbody id='gdt_ycon'>
+										<tr>
+											<td>10001</td>
+											<td>lengy</td>
+											<td><img src="winxin.jpg" alt=""></td>
+											<td>
+												<p>我在寻找这款鞋底的供应商，鞋码大大大地方发的说法 发斯蒂芬大阿斯顿发发放阿萨德发电饭锅</p>
+											</td>
+											<td>2015/03/31/09:33:33</td>
+											<td>未处理<input type="button" value="抢单" id="gd_yqd" class="gd_qd"></td>
+										</tr>
+										<tr>
+											<td>10001</td>
+											<td>lengy</td>
+											<td><img src="winxin.jpg" alt=""></td>
+											<td>
+												<p>我在寻找这款鞋底的供应商，鞋码大大大地方发的说法 发斯蒂芬大阿斯顿发发放阿萨德发电饭锅</p>
+											</td>
+											<td>2015/03/31/09:33:33</td>
+											<td>处理成功</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+	</body>
+
+</html>
+<!-- <script type="text/javascript" src="js/jquery.uploadView.js"></script> -->
+<script>
+	/* $(".js_upFile").uploadView({
+		uploadBox: '.js_uploadBox', //设置上传框容器
+		showBox: '.js_showBox', //设置显示预览图片的容器
+		width: 480, //预览图片的宽度，单位px
+		height: 360, //预览图片的高度，单位px
+		allowType: ["gif", "jpeg", "jpg", "bmp", "png"], //允许上传图片的类型
+		maxSize: 2, //允许上传图片的最大尺寸，单位M
+		success: function(e) {
+			$(".js_uploadText").text('更改');
+			alert('图片上传成功');
+		}
+	}); */
+//	---------------------------------------
+	//	业务员客户身份切换
+	$("#gdr_top").children('ul').children('li').click(function(){
+		$(this).children('a').addClass('gd_select').parent('li').siblings().children('a').removeClass('gd_select');
+		var ren = $(this).data('ren');
+		$('#'+ren).removeClass('gd_hide').siblings().addClass('gd_hide ');
+	});
+	
+	//	业务员抢单
+	$("#gd_kqd").click(function(){
+		window.location='wechat_xxnr.html';
+	});
+	//	客户导航切换
+	$('#mes_dh').children('ul').children('li').click(function() {
+
+		$(this).removeClass('mes_active').siblings().addClass('mes_active ');
+		var base = $(this).data('base');
+
+		$('#'+base).removeClass('gd_hide').siblings().addClass('gd_hide ');
+	});
+	//业务员导航切换
+	$('#mes_ydh').children('ul').children('li').click(function() {
+
+		$(this).removeClass('mes_active').siblings().addClass('mes_active ');
+		var ybase = $(this).data('ybase');
+
+		$('#'+ybase).removeClass('gd_hide').siblings().addClass('gd_hide ');
+	});
+	$(function(){
+	   com();
+	   //_UserBO_js.listDesigner(hot_kuai);
+	   //概况
+		 $("#gdt_gk").click(function(){
+		 
+			_WdBODwr_js.doGetOrder(uid,function(data){
+				var str='';
+				
+				console.log(data);
+				for(var i=0;i<data.length;i++){
+				str+='<tr>'
+						+'<td>'+data[i].core+'</td>'
+						+'<td>'+data[i].username+'</td>'
+						+'<td>'+data[i].pic+'</td>'
+						+'<td>'
+						+'	'+data[i].message+'</p>'
+						+'</td>'
+						+'<td>'+data[i].add_time+'</td>'
+						+'<td>'+data[i].state+'</td>'
+						+'</tr>';
+				}
+				$("#gdt_con").html(str);
+			});
+			
+		}); 
+		//未处理
+		$("#gdt_wcl").click(function(){
+			_WdBODwr_js.doGetUntreatedOrder(uid,function(data){
+				var str='';
+				console.log(data);
+				for(var i=0;i<data.length;i++){
+				str+='<tr>'
+						+'<td>'+data[i].core+'</td>'
+						+'<td>'+data[i].username+'</td>'
+						+'<td>'+data[i].pic+'</td>'
+						+'<td>'
+						+'	'+data[i].message+'</p>'
+						+'</td>'
+						+'<td>'+data[i].add_time+'</td>'
+						+'<td>'+data[i].state+'</td>'
+						+'</tr>';
+				}
+				$("#gdt_con").html(str);
+			});
+			
+		});
+		$("#gdt_clz").click(function(){
+			_WdBODwr_js.doGetOrder(uid,function(data){
+				var str='';
+				console.log(data);
+				for(var i=0;i<data.length;i++){
+				str+='<tr>'
+						+'<td>'+data[i].core+'</td>'
+						+'<td>'+data[i].username+'</td>'
+						+'<td>'+data[i].pic+'</td>'
+						+'<td>'
+						+'	'+data[i].message+'</p>'
+						+'</td>'
+						+'<td>'+data[i].add_time+'</td>'
+						+'<td>'+data[i].state+'</td>'
+						+'</tr>';
+				}
+				$("#gdt_con").html(str);
+			});
+			
+		}); 
+	});
+</script>
